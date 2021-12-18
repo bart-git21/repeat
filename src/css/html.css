@@ -1,0 +1,46 @@
+
+
+
+
+/*====== index.html ==========*/
+
+.html-icons .list {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.html-icons .unicode-character {
+    color: rgb(253, 253, 133);
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.html-icons .icon {
+    color: rgb(253, 253, 133);
+    max-width: 35px;
+}
+
+.html-icons .icon-contact {
+    color: rgb(253, 253, 133);
+    font-size: 35px;
+}
+
+
+
+ /* table */
+
+table {
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+table th, td {
+    border: 1px solid #bbb;
+    padding: 0 10px;
+}
+table thead, tfoot {
+    background: #aaa;
+}
+table tbody {
+    background: #eee;
+}
