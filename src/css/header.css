@@ -56,6 +56,6 @@ header .link-to-article:not(:last-child) {
     margin-right: 30px;
 }
 header .link-to-article:hover {
-    border: 1px solid var(--main-bg-color);
+    border: 1px solid var(--main-section-color);
     transform: scale(1.05);
 }
