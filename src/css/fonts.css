@@ -24,3 +24,6 @@
 .icon-contact:before {
   content: "\e900";
 }
+.icon-music:before {
+  content: "\e901";
+}
