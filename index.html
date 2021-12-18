@@ -44,7 +44,6 @@
                 <div class="section-content">
     
                     <span>Добавить иконку можно несколькими способами.</span>
-                    <span>P.S. Читай title к нужному элементу</span>
             
                     <div class="list">
                         <div class="item">
@@ -68,6 +67,63 @@
                             <span>Contact</span>
                         </div>            
                     </div>
+    
+                </div>
+            </section>
+    
+            <!-- иконки -->
+            <section class="html-table">
+                <div class="section-title">Таблицы</div>
+                <div class="section-tag">
+                    <span>Источники:</span>
+                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Advanced">
+                        <span>HTML таблицы</span>
+                    </a>
+                </div>
+    
+                <div class="section-content">
+    
+                    <span>Теги:</span>
+            
+                    <div class="list">
+                        <table>
+                            <caption title="для скринридеров. сразу после Table">this is a caption</caption>
+                            
+                            <thead>
+                                <tr title="для css. thead > tr > 3 th">
+                                    <th>th 1</th>
+                                    <th>th 2</th>
+                                    <th>th 3</th>
+                                </tr>
+                            </thead>
+
+                            <tbody title="для css. tbody > tr > td">
+                                <tr>
+                                    <td>td</td>
+                                    <td>td</td>
+                                    <td>td</td>
+                                </tr>
+                                <tr>
+                                    <td>td</td>
+                                    <td>td</td>
+                                    <td rowspan="2">td rowspan=2</td>
+                                </tr>
+                                <tr>
+                                    <td>td</td>
+                                    <td>td</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot title="для css. tfoot > tr > td">
+                                <tr >
+                                    <td colspan="2">td colspan=2</td>
+                                    <td>td </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <span title="table>tr>td">таблицу можно вложить в другую таблицу</span>
     
                 </div>
             </section>
