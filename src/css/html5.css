@@ -79,6 +79,8 @@
 /*====== audio  ==========*/
 
 .html5-audio .list {
+    width: 300px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,15 +93,32 @@
 
 .html5-audio .list .cover {
     position: relative;
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 90px;
     margin: 10px;
     background: rgba(255,255,255,.8);
     border-radius: 50%;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
     transition: .5s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.html5-audio .list .cover:before {
+.html5-audio .list .cover svg {
+    position: absolute;
+    font-size: 55px;
+
+}
+.html5-audio .list .cover svg:first-child {
+    display: none;
+    color: red;
+}
+.html5-audio .list .cover svg:last-child {
+    display: block;
+    color: green;
+}
+/* .html5-audio .list .cover:before {
     content: "\e901";
     font-family: 'icons';
     font-size: 70px;
@@ -113,7 +132,17 @@
     background: linear-gradient(to top, #e7025a, #e2fa0d);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+} */
+
+
+/* audio own tag*/
+
+.html5-audio .list .sound {
+    margin: 10px;
 }
+
+
+/* checkboxes*/
 
 .viewAudio {
     position: relative;
@@ -122,6 +151,7 @@
     width: 150px;
     height: 40px;
     border-radius: 12px;
+    margin: 5px;
 }
 .viewAudio input[type='checkbox'] {
     position: absolute;
@@ -133,16 +163,55 @@
     text-align: center;
     line-height: 40px;
     color: #fff;
+    cursor: pointer;
 }
 .viewAudio label:before {
-    content: "visible player";
+    content: "controls off";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+.viewAudio input[type='checkbox']:checked + label:before {
+    content: "controls on";
     display: block;
     width: 100%;
     height: 100%;
     background: green;
 }
-.viewAudio input[type='checkbox']:checked + label:before {
-    content: "invisible player";
+
+
+
+.loopAudio {
+    position: relative;
+    overflow: hidden;
+
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    margin: 5px;
+}
+.loopAudio input[type='checkbox'] {
+    position: absolute;
+}
+.loopAudio label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.loopAudio label:before {
+    content: "loop switch on";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: green;
+}
+.loopAudio input[type='checkbox']:checked + label:before {
+    content: "loop switch off";
     display: block;
     width: 100%;
     height: 100%;
