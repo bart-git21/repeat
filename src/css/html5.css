@@ -1,0 +1,150 @@
+
+/*====== html 5.html ==========*/
+
+
+/*======  semantic ==========*/
+
+.html5-semantic .list {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.html5-semantic .semantic-header {
+    background: #716F81;
+    width: 350px;
+    height: 80px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.html5-semantic .semantic-header .content {
+    background: #B97A95;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 90%;
+    padding: 10px;
+
+}
+.html5-semantic .semantic-header .content:first-child {
+    justify-self: center;
+}
+.html5-semantic .semantic-header .content:last-child {
+    justify-self: flex-end;
+}
+
+.html5-semantic .semantic-header .content2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.html5-semantic .semantic-main {
+    background: #716F81;
+    width: 350px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.html5-semantic .semantic-main .semantic-main-content {
+    background: #B97A95;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+}
+.html5-semantic .semantic-main .semantic-main-content .semantic-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-right: 1px solid #000;
+}
+.html5-semantic .semantic-main .semantic-main-content .semantic-article .semantic-section {
+    background: #F6AE99;
+    width: 90%;
+    text-align: center;
+}
+
+
+/*====== audio  ==========*/
+
+.html5-audio .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+/* обложка */
+
+.html5-audio .list .cover {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    background: rgba(255,255,255,.8);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+    transition: .5s linear;
+}
+.html5-audio .list .cover:before {
+    content: "\e901";
+    font-family: 'icons';
+    font-size: 70px;
+    color: #FD9F85;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -32px);
+    line-height: 180px;
+
+    background: linear-gradient(to top, #e7025a, #e2fa0d);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.viewAudio {
+    position: relative;
+    overflow: hidden;
+
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+}
+.viewAudio input[type='checkbox'] {
+    position: absolute;
+}
+.viewAudio label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.viewAudio label:before {
+    content: "visible player";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: green;
+}
+.viewAudio input[type='checkbox']:checked + label:before {
+    content: "invisible player";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
