@@ -16,7 +16,12 @@ body {
     font-family: "Montserrat";
 }
 
-
+.light {
+    --main-bg-color: #F8B595;
+    --main-section-color: #F67280;
+    --button-color: #C06C84;
+    --dark-color: #6C5B7C;
+}
 
 
 /* ============= article: html, html 5, css and etc. ============= */
