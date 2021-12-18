@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/fonts.css">
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     
 </head>
 <body>
@@ -77,6 +79,43 @@
                                 <div class="semantic-nav">navigation menu</div>
                             </div>
                         </div>
+                    </div>
+    
+                </div>
+            </section>
+    
+            <!-- аудио  -->
+            <section class="html5-audio">
+                <div class="section-title">Аудио</div>
+                <div class="section-tag">
+                    <span>Источники:</span>
+                    <a target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">
+                        <span>1.12. HTML5-аудио</span>
+                    </a>
+                </div>
+    
+                <div class="section-content">
+    
+                    <span>Добавить иконку можно несколькими способами.</span>
+                    <span>P.S. Читай title к нужному элементу</span>
+            
+                    <div class="list">
+                        <div class="cover">
+                            <span class="material-icons"></span>
+                        </div>
+
+                        <div class="sound">
+                            <audio controls title="можно audio src, можно audio > source src"  type="audio/mpeg">
+                                <source src="../media/creek.mp3" >
+                            </audio>
+                        </div>
+
+                        <span class="viewAudio">
+                            <input type="checkbox" name="" id="viewAudio" >
+                            <label for="viewAudio" title="Атрибут controls"></label>
+                        </span>
+
+
                     </div>
     
                 </div>
