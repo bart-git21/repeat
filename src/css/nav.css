@@ -1,0 +1,19 @@
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav__button {
+    background: var(--button-color);    
+}
+.nav__button:not(:last-child) {
+    margin-right: 30px;
+}
+
+.nav__button:hover {
+    border: 1px solid var(--main-section-color);
+}
