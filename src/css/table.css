@@ -1,0 +1,17 @@
+
+
+
+.table {
+    border-spacing: 2px;
+    border-collapse: collapse;
+}
+.table th, td {
+    border: 1px solid #bbb;
+    padding: 0 10px;
+}
+.table thead, tfoot {
+    background: #aaa;
+}
+.table tbody {
+    background: #eee;
+}
