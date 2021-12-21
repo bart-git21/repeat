@@ -1,5 +1,5 @@
 
-/* ============= HEADER ============= */
+
 .header {
     width: 100%;
     padding: 20px;
@@ -23,46 +23,3 @@
     /* --dark-color: #453750; */
 }
 
-/* logo */
-.logo {
-    font-size: 22px;
-}
-
-/* navigation */
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav__button {
-    position: relative;
-    background: var(--button-color);   
-    border-radius: 8px;
-    padding: 4px 20px;
-    border: 1px solid transparent;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    letter-spacing: 1px; 
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 39px;
-    
-    cursor: pointer;
-
-    transition: all .3s;
-}
-.nav__button:not(:last-child) {
-    margin-right: 30px;
-}
-
-.nav__button:hover {
-    border: 1px solid var(--main-section-color);
-    transform: scale(1.05);
-}
