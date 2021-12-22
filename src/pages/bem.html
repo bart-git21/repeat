@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/fonts.css">
+    
+    
+</head>
+<body>
+
+    <header class="header header_light">
+        <div class="logo">My Mind Palace</div>
+        <nav class="nav">
+            <a href="../../index.html" class="nav__button button">
+                <span>HTML</span>
+            </a>
+            <a href="html5.html" class="nav__button button">
+                <span>HTML 5</span>
+            </a>
+            <a href="git.html" class="nav__button button">
+                <span>Git</span>
+            </a>
+        </nav>
+    </header>
+    
+    <main class="main main_light">
+        <div class="title-main">
+            <span>БЭМ</span>
+        </div>
+    
+        <article class="main__article">
+    
+            <!-- key -->
+            <section class="section">
+                <div class="title-section">Блок - Элемент - Модификатор</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://ru.bem.info/methodology/key-concepts/">
+                        <span>Документация БЭМ</span>
+                    </a>
+                </div>
+    
+                <div class="content-section">
+                    <div class="title-text">Блок</div>                    
+                    <div class="img center-border">
+                        <img src="https://ru.bem.info/kFetIbKxQdABHhUecbic45Il0Bg.png" alt="">
+                    </div>
+                    <div class="title-text">Элемент</div>
+                    <span class="text">Элементы не имеют смысла вне блока.</span>
+                    <span class="text">Классически отделяются двумя подчеркиваниями. Но можно использовать другой разделитель.</span>
+                    <div class="img center-border">
+                        <img src="https://ru.bem.info/cPrdQL4EZZdhPIrcYOayygPBSm4.png" alt="">
+                    </div>
+                    <div class="title-text">Модификатор</div>
+                    <span class="text">Определяет внешний вид, состояние и поведение блока либо элемента.</span>
+                    <span class="text">В классической схеме имя модификатора отделяется одним подчеркиванием.</span>
+                    <div class="img center-border">
+                        <img src="https://ru.bem.info/WSU5nwZla7p44W2tdxiP371xx38.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!-- принципы -->
+            <section class="section">
+                <div class="title-section">Принципы</div>
+                <ul class="list">
+                    <li>не использовать комбинированные селекторы вида
+                        <span class="dark-background">.class1.class2 { }</span>
+                    </li>
+                    <li>не использовать тег и класс в селекторе
+                        <span class="dark-background">h1.class { }</span>
+                    </li>
+                    <li>не использовать атрибуты тегов
+                        <span class="dark-background">input[type=submit] { }</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- преимущества -->
+            <section class="section">
+                <div class="title-section">Преимущства</div>
+                <ul class="list">
+                    <li>БЭМ избавляет от вложенности селекторов
+                        <span class="dark-background">header nav button a { }</span>
+                    </li>
+                    <li>Можно миксовать стили универсальных блоков и дополнительных классов
+                        <span class="dark-background">form class = "form search"</span>
+                    </li>
+                    <li>Файловая структура проекта облегчает перенос блока из проекта в проект. Чтобы вместе с версткой перенести все стили и поведение блока, достаточно скопировать папку этого блока в новый проект.
+                    </li>
+                </ul>
+            </section>
+    
+        </article>
+
+    </main>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
