@@ -26,34 +26,27 @@
         </nav>
     </header>
     
-    <main class="light">
+    <main class="main main_light">
+        <div class="title-main">Git</div>
     
         <!-- html 5 -->
-        <article>
-            <div class="article-title">
-                <span>Git</span>
-            </div>
+        <article class="main__article">
     
             <!-- semantic -->
-            <section class="git-remove">
-                <div class="section-title">Remove</div>
-                <div class="section-tag">
-                    <span>Источники:</span>
-                    <a target="_blank" rel = "noopener" href="https://git-scm.com/docs/git-rm">
-                        <span>GIT Documentation - git-rm</span>
+            <section class="section">
+                <div class="title-section">Remove directory</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://git-scm.com/docs/git-rm">
+                        <span>GIT Documentation</span>
                     </a>
                 </div>
     
-                <div class="section-content">
-                    <span>Как удалить папку (directory)?</span>
-                    <span>P.S. Читай title к нужному элементу</span>
-                    
-                    <div class="list">
-                        <span>$ git rm -r test_dir</span>    
-                        <span>$ git commit -m "Removed test directory"</span>    
-                        <span title="Change 'master'">$ git push origin master</span>    
-                    </div>
-    
+                <div class="content-section">
+                    <div class="title-text">Как удалить папку?</div>
+                    <div class="text dark-background">$ git rm -r test_dir</div>
+                    <div class="text dark-background">$ git commit -m "Removed test directory"</div>
+                    <div title="Change 'master'" class="text dark-background">$ git push origin master</div>
                 </div>
             </section>
     
