@@ -1,0 +1,89 @@
+
+
+
+.button {
+    position: relative;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+    
+    cursor: pointer;
+
+    transition: all .2s linear;
+}
+
+/* a */
+
+.button a {
+    text-decoration: none;
+}
+
+
+
+/* blue button*/
+
+.button-blue {
+    margin: 10px 0;
+    background: var(--main-bg-color);
+    height: 100%;
+    padding: 0 10px;
+}
+
+
+
+/* CHECKBOX button*/
+.button-checkbox input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+}
+
+.button-checkbox input[type="checkbox"] + label {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 0 20px;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: inset -8px -8px 15px rgba(255, 255, 255, 0.6), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.button-checkbox input[type="checkbox"] + label:before {
+    position: absolute;
+    border-radius: 20px;
+    padding: 4px;
+    width: 55px;
+    height: 25px;
+    top: 8px;
+    left: 8px;
+
+    content: "off";
+    font-size: 13px;
+    text-align: center;
+    line-height: 18px;
+
+    background-color: var(--button-color);
+    box-shadow: -3px -3px 5px rgba(199, 0, 56, 0.5),
+        3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+.button-checkbox input[type='checkbox']:checked + label::before {
+    content: "on";
+    left: 40%;
+    background: green;
+    box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5),
+                3px 3px 5px #00b33c;
+}
