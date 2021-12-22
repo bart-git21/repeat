@@ -32,9 +32,16 @@ body {
     font-family: "Montserrat";
     font-size: 16px;
 }
-/* div, span {
-    margin: 15px 0;
-} */
+.main_light {
+    --main-gradient-color: linear-gradient( rgba(255, 88, 51, 0.8), rgba(199, 0, 56, 0.8));
+    /* --main-section-color: #ffd5cc; */
+    --main-section-color: #eeeeee;
+    --main-bg-color: #41729f;
+    --button-color: #C70039;
+    --dark-color: #46466E;
+    /* --dark-color: #453750; */
+
+}
 
 
 /* ============= article: html, html 5, css and etc. ============= */
