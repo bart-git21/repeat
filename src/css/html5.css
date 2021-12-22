@@ -1,58 +1,53 @@
 
-/*====== html 5.html ==========*/
-
-
 /*======  semantic ==========*/
 
-.html5-semantic .list {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.html5-semantic .semantic-header {
+.semantic-header {
     background: #716F81;
     width: 350px;
-    height: 80px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.html5-semantic .semantic-header .content {
+
+.semantic-header span, div {
+    margin: 0;
+}
+.semantic-header .content {
     background: #B97A95;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     width: 90%;
-    padding: 10px;
-
-}
-.html5-semantic .semantic-header .content:first-child {
-    justify-self: center;
-}
-.html5-semantic .semantic-header .content:last-child {
-    justify-self: flex-end;
+    text-align: center;
 }
 
-.html5-semantic .semantic-header .content2 {
+.semantic-header .content2 {
     grid-template-columns: 1fr;
     text-align: center;
 }
 
-.html5-semantic .semantic-main {
+
+
+
+.semantic-main span, div {
+    margin: 0;
+}
+
+.semantic-main {
     background: #716F81;
     width: 350px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.html5-semantic .semantic-main .semantic-main-content {
+.semantic-main .semantic-main-content {
     background: #B97A95;
 
     display: flex;
@@ -61,7 +56,7 @@
 
     width: 90%;
 }
-.html5-semantic .semantic-main .semantic-main-content .semantic-article {
+.semantic-main .semantic-main-content .semantic-article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,29 +64,21 @@
     flex-grow: 1;
     border-right: 1px solid #000;
 }
-.html5-semantic .semantic-main .semantic-main-content .semantic-article .semantic-section {
+.semantic-main .semantic-main-content .semantic-article .semantic-section {
     background: #F6AE99;
     width: 90%;
     text-align: center;
+    margin: 0;
+
 }
 
 
-/*====== audio  ==========*/
+/*====== AUDIO ==========*/
 
-.html5-audio .list {
-    width: 300px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-}
 
 /* обложка */
 
-.html5-audio .list .cover {
+.cover {
     position: relative;
     height: 90px;
     width: 90px;
@@ -105,115 +92,29 @@
     justify-content: center;
     align-items: center;
 }
-.html5-audio .list .cover svg {
+.cover:hover {
+    cursor: pointer;
+}
+.cover svg {
     position: absolute;
     font-size: 55px;
-
 }
-.html5-audio .list .cover svg:first-child {
+.cover svg:first-child {
     display: none;
     color: red;
 }
-.html5-audio .list .cover svg:last-child {
+.cover svg:last-child {
     display: block;
     color: green;
 }
-/* .html5-audio .list .cover:before {
-    content: "\e901";
-    font-family: 'icons';
-    font-size: 70px;
-    color: #FD9F85;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -32px);
-    line-height: 180px;
-
+/* .cover:before {
     background: linear-gradient(to top, #e7025a, #e2fa0d);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 } */
 
 
-/* audio own tag*/
 
-.html5-audio .list .sound {
-    margin: 10px;
-}
-
-
-/* checkboxes*/
-
-.viewAudio {
-    position: relative;
-    overflow: hidden;
-
-    width: 150px;
-    height: 40px;
-    border-radius: 12px;
-    margin: 5px;
-}
-.viewAudio input[type='checkbox'] {
-    position: absolute;
-}
-.viewAudio label {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 40px;
-    color: #fff;
-    cursor: pointer;
-}
-.viewAudio label:before {
-    content: "controls off";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: red;
-}
-.viewAudio input[type='checkbox']:checked + label:before {
-    content: "controls on";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: green;
-}
-
-
-
-.loopAudio {
-    position: relative;
-    overflow: hidden;
-
-    width: 150px;
-    height: 40px;
-    border-radius: 12px;
-    margin: 5px;
-}
-.loopAudio input[type='checkbox'] {
-    position: absolute;
-}
-.loopAudio label {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 40px;
-    color: #fff;
-    cursor: pointer;
-}
-.loopAudio label:before {
-    content: "loop switch on";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: green;
-}
-.loopAudio input[type='checkbox']:checked + label:before {
-    content: "loop switch off";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: red;
+.sound {
+    margin: 20px;
 }
