@@ -1,0 +1,9 @@
+
+
+.dark-background {
+    /* background: #19334d; */
+    background: var(--dark-color);
+    color: #fff;
+}
+
+
