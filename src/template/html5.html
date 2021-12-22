@@ -28,77 +28,68 @@
         </nav>
     </header>
     
-    <main class="light">
+    <main class="main main_light">
+        <div class="title-main">HTML 5</div>
     
-        <!-- html 5 -->
-        <article>
-            <div class="article-title">
-                <span>HTML 5</span>
-            </div>
+        
+        <article class="main__article">
     
             <!-- аудио  -->
-            <section class="html5-audio">
-                <div class="section-title">Аудио</div>
-                <div class="section-tag">
-                    <span>Источники:</span>
-                    <a target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">
-                        <span>1.12. HTML5-аудио</span>
-                    </a>
+            <section class="section">
+                <div class="title-section">Аудио</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">html5book</a>
                 </div>
     
-                <div class="section-content">
+                <div class="content-section">
                 
-                    <div class="list">
-
-                        <div class="sound">
-                            <audio class="sound-audio" controls title="можно audio src, можно audio > source src">
-                                <source src="../media/creek.mp3" type="audio/mpeg">
-                            </audio>
-                        </div>
-
-                        <div class="cover" title="можно запускать плеер кликая по картинке">
+                    <div class="text">можно запускать плеер кликая по картинке:</div>
+                    <div class="center-border">
+                        <div class="cover ">
                             <svg class="audio-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4v-1.73L19.73 21L21 19.73L4.27 3zM14 7h4V3h-6v5.18l2 2z" fill="currentColor"/></svg>
                             <svg class="audio-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6z" fill="currentColor"/></svg>
                         </div>
-
-                        <span>Атрибуты:</span>
-                        <span class="viewAudio" title="вкл/выкл атрибут controls">
-                            <input type="checkbox" name="viewAudio" id="viewAudio" >
-                            <label for="viewAudio"></label>
-                        </span>
-
-                        <span class="loopAudio" title="вкл/выкл атрибут loop">
-                            <input type="checkbox" name="loopAudio" id="loopAudio" >
-                            <label for="loopAudio"></label>
-                        </span>
-
-
                     </div>
+
+                    <div class="title-text">Атрибуты тега audio:</div>
+                    <ul class="list">
+                        <li>controls
+                            <span class="button-checkbox button">
+                                <input  type="checkbox" name="viewAudio" id="viewAudio" >
+                                <label for="viewAudio"></label>
+                            </span>
+                            <div class="sound">
+                                <audio class="sound-audio" controls title="можно audio src, можно audio > source src">
+                                    <source src="../media/European bee eater.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </li>
+                        <li>loop
+                            <span class="button-checkbox button">
+                                <input type="checkbox" name="loopAudio" id="loopAudio" >
+                                <label for="loopAudio"></label>
+                            </span>
+                        </li>
+                    </ul>
     
                 </div>
             </section>
     
             <!-- semantic -->
-            <section class="html5-semantic">
-                <div class="section-title">Семантика</div>
-                <div class="section-tag">
-                    <span>Источники:</span>
-                    <a target="_blank" rel = "noopener" href="https://www.semrush.com/blog/semantic-html5-guide//">
-                        <span>Article - "What is semantic HTML5?"</span>
-                    </a>
-                    <a target="_blank" rel = "noopener" href="https://html5book.ru/html-tags/">
-                        <span>1.2. HTML-элементы</span>
-                    </a>
-                    <a target="_blank" rel = "noopener" href="https://myrusakov.ru/using-html5-sectioning-elements.html">
-                        <span>29. Как использовать секционные элементы в HTML5</span>
-                    </a>
+            <section class="section">
+                <div class="title-section">Семантика</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a target="_blank" rel = "noopener" href="https://html5book.ru/html-tags/">html5book</a>
+                    <a target="_blank" rel = "noopener" href="https://www.semrush.com/blog/semantic-html5-guide//">semrush</a>
+                    <a target="_blank" rel = "noopener" href="https://myrusakov.ru/using-html5-sectioning-elements.html">myrusakov</a>
                 </div>
     
-                <div class="section-content">
-                    <span>Теги HTML5 для разметки.</span>
+                <div class="content-section">
+                    <div class="title-text">Теги HTML5 для разметки.</div>
             
-                    <div class="list">
-                        
+                    <div class="center-border">
                         <div class="semantic-header">
                             <span title="начало контента">header</span>
                             <div class="content">
