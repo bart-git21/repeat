@@ -1,10 +1,24 @@
 
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(header.css);
-@import url(html5.css);
-@import url(html.css);
+@import url(_variables.css);
 
+@import url(header/header.css);
+@import url(header/logo.css);
+@import url(header/nav.css);
+
+@import url(blocks/buttons.css);
+@import url(blocks/icon.css);
+@import url(blocks/img.css);
+@import url(blocks/list.css);
+@import url(blocks/table.css);
+@import url(blocks/text.css);
+@import url(blocks/titles.css);
+
+@import url(modifier/border.css);
+@import url(modifier/dark.css);
+
+@import url(html5.css);
 
 *,
 *::before,
@@ -16,139 +30,56 @@
 
 body {
     font-family: "Montserrat";
+    font-size: 16px;
 }
-
-.light {
-    --main-gradient-color: linear-gradient( rgba(255, 88, 51, 0.8), rgba(199, 0, 56, 0.8));
-    --main-section-color: #ffd5cc;
-    --main-bg-color: #900C3F;
-    --button-color: #C70039;
-    --dark-color: #46466E;
-    /* --dark-color: #453750; */
-}
+/* div, span {
+    margin: 15px 0;
+} */
 
 
 /* ============= article: html, html 5, css and etc. ============= */
 
-article {
-    width: 100%;
+
+.main {
     min-height: 100vh;
-    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     background: var(--main-section-color);
 }
 
-.article-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    font-weight: 700;
-    font-size: 50px;
-
+.main__article {
+    width: 750px;
+    padding: 20px 30px;
 }
 
-/* ============= a SECTION =======  */
-section {
+
+/* ============= SECTION =======  */
+
+.section {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
-    padding: 10px;
-}
-
-/* .section title */
-.section-title {
-    align-self: center;
-    font-weight: 700;
-    font-size: 30px;
-    margin: 10px;
-}
-
-/* section tag */
-.section-tag {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    opacity: 0.1;
-    transition: .4s;
-}
-section:hover .section-tag {
-    opacity: 1;
-}
-
-.section-tag a {
-    margin-left: 30px;
-}
-.section-tag a:hover {
-    scale: 1.1;
+    width: 100%;
+    padding: 30px;
+    margin: 0 0 20px 0;
+    background: #fff;
 }
 
 
 /* ============= CONTENT ============= */
-.section-content {
+.content-section {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 2%;
+    width: 100%;
 
-    opacity: 0.1;
     transition: .4s;
-}
-section:hover .section-content {
-    opacity: 1;
-}
-
-
-
-/* item of the list */
-
-.section-content .list .item {
-    border-radius: 10px;
-    background: #41729f;
-    padding: 10px 30px;
-    margin: 10px 0;
-
-    color: #fff;
-    font-size: 22px;
-    line-height: 1.1;
-
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.section-content .list .item:hover {
-    background: #162e44;
-}
-.section-content .list .item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.section-content .list .item a {
-    text-decoration: none;
-}
-
-
-
-/* unic classes in own section */
-
-
-
-
-
-
-/*====== git.html ==========*/
-
-.git-remove .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    background: #19334d;
-    padding: 10px;
-    color: #fff;
 }
