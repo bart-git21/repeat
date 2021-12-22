@@ -29,8 +29,9 @@ viewAudio.addEventListener("change", function() {
 loopAudio.addEventListener("change", function() {
     if (loopAudio.checked == true) {
         sound_audio.loop = true;
-        console.log(sound_audio);
     }
-    else sound_audio.loop = false;
+    else {
+        sound_audio.loop = false;
+    }
 })
 
