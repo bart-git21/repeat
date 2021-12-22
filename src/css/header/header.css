@@ -1,0 +1,25 @@
+
+
+.header {
+    width: 100%;
+    padding: 20px;
+
+    background: var(--dark-color);
+    color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 0 15px 1px var(--dark-color);
+}
+
+.header_light {
+    --main-gradient-color: linear-gradient( rgba(255, 88, 51, 0.8), rgba(199, 0, 56, 0.8));
+    --main-section-color: #ffd5cc;
+    --main-bg-color: #900C3F;
+    --button-color: #C70039;
+    --dark-color: #46466E;
+    /* --dark-color: #453750; */
+}
+
