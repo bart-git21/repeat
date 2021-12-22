@@ -4,6 +4,8 @@
     /* background: #19334d; */
     background: var(--dark-color);
     color: #fff;
+    padding: 0 20px;
+    height: 100%;
 }
 
 
