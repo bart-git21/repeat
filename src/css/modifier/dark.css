@@ -5,7 +5,8 @@
     background: var(--dark-color);
     color: #fff;
     padding: 0 20px;
-    height: 100%;
+    display: inline-block;
+    line-height: 2em;
 }
 
 
