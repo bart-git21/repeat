@@ -1,4 +1,24 @@
 
+.title-index {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: var(--dark-color);
+    font-size: 6em;
+    font-weight: 900;
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Bad Script', cursive;
+    /* font-family: 'Comforter', cursive; */
+    /* font-family: 'Marck Script', cursive; */
+    letter-spacing: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .title-main {
     display: flex;
