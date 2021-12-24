@@ -132,6 +132,86 @@
                     <div class="text" title="table>tr>td">Таблицу можно вложить в другую таблицу</div>
                 </div>
             </section>
+    
+            <!-- SVG -->
+            <section class="section">
+                <div class="title-section">SVG</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">MDN</a>
+                </div>
+                SVG — это как отдельная HTML-страница.
+                <div class="title-text">Как добавить SVG в HTML страницу:</div>
+                <ul class="list">
+                    <li>
+                        <span class="text-bold">object</span>
+                        <div>позволяет применять скрипты. Это самый надежный метод для обеспечения интерактивности.</div>
+                        <div></div>
+                        <div class="text-dark-background">
+                            <div>&#60object type="image/svg+xml" data="picture.svg"></div>
+                            <div>&#60img src="picture.png"></div>
+                            <div>&#60/object></div>                            
+                        </div>
+                        <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
+                        <div>Cons! CSS стили придется прописывать в SVG файл.</div>
+                        <div >Запуск SVG анимации.
+                            <span class="button-checkbox button">
+                                <input type="checkbox" name="object_svg" id="object_svg" >
+                                <label for="object_svg"></label>
+                            </span>
+                        </div>
+                        <div class="center-border">
+                            <object id="wheel" data="../media/wheel.svg" type="image/svg+xml"></object>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text-bold">img</span>
+                        <div>используется когда нет необходимости добавлять интерактивность.</div>
+                        <div class="text-dark-background">
+                            <div>&#60img src="fallback.png" srcset="equilateral.svg"></div>
+                        </div>
+                        <div>Pros! "srcset": older browsers will load the PNG instead SVG.</div>
+                        <div>Cons! SVG can't be manipulated with JavaScript.</div>
+                    </li>
+                    <li>
+                        <span class="text-bold">css background image.</span>
+                        <div>используется когда нет необходимости добавлять интерактивность.</div>
+                        <div class="text-dark-background">
+                            <div>
+                                {background: url("fallback.png") no-repeat center;<br>
+                                background-image: url("image.svg");<br>
+                                background-size: contain;}
+                            </div>
+                        </div>
+                        <div>Pros! use fallback - older browsers will stick with the PNG that they understand, while newer browsers will load the SVG.</div>
+                        <div>Cons! SVG can't be manipulated with JavaScript.</div>
+                    </li>
+                    <li>
+                        <span class="text-bold">iframe</span>
+                        <div>позволяет применять скрипты.</div>
+                        <div class="text-dark-background">
+                            <div>&#60 iframe src="triangle.svg" width="500" height="500" sandbox></div>
+                            <div>&#60img src="fallback.png"/></div>
+                            <div>&#60/iframe></div>
+                        </div>
+                        <div>используется когда нет необходимости добавлять интерактивность.</div>
+                        <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
+                    </li>
+                    <li>
+                        <span class="text-bold">SVG inline</span>
+                        <div>позволяет применять скрипты.</div>
+                        <div class="text-dark-background">
+                            <div>&#60svg width="300" height="200"></div>
+                            <div>&#60rect width="100%" height="100%" fill="green"></div>
+                            <div>&#60/svg></div>
+                        </div>
+                        <div>Pros! You can use JavaScript, animation and you can style with CSS. also you can use any SVG presentation attribute as a CSS property.</div>
+                        <div>Cons! Extra SVG code increases the size of your HTML file.</div>
+                        <div>Cons! этот метод не позволяет поддерживать кэширование.</div>
+                    </li>
+                </ul>
+                    
+            </section>
             
         </article>
     
@@ -143,7 +223,7 @@
 
 
 
-    <script src="html5.js"></script>
+    <script src="../script/wheel.js"></script>
     
 </body>
 </html>

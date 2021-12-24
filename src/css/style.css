@@ -23,7 +23,7 @@
 @import url(blocks/titles.css);
 
 @import url(modifier/border.css);
-@import url(modifier/dark.css);
+@import url(modifier/rotate.css);
 
 @import url(html5.css);
 
@@ -37,9 +37,8 @@
 
 body {
     font-family: "Montserrat";
-    font-size: 16px;
+    font-size: 15px;
 }
-
 
 /* ============= article: html, html 5, css and etc. ============= */
 
