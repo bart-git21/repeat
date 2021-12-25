@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 @import url(_variables.css);
 
@@ -13,17 +14,20 @@
 @import url(header/logo.css);
 @import url(header/nav.css);
 
+@import url(blocks/boxes.css);
 @import url(blocks/buttons.css);
 @import url(blocks/card.css);
 @import url(blocks/icon.css);
 @import url(blocks/img.css);
 @import url(blocks/list.css);
+@import url(blocks/popup.css);
 @import url(blocks/table.css);
 @import url(blocks/text.css);
 @import url(blocks/titles.css);
 
 @import url(modifier/border.css);
 @import url(modifier/rotate.css);
+@import url(modifier/opacity.css);
 
 @import url(html5.css);
 
@@ -44,16 +48,19 @@ body {
 
 
 .main {
-    min-height: 90%;
+    /* min-height: 90%;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: center; */
+    height: 100vh;
+    overflow: hidden;
 }
 
 
 .main__article {
+    margin: 0 auto;
     width: 750px;
     padding: 20px 30px;
 }
@@ -62,13 +69,8 @@ body {
 /* ============= SECTION =======  */
 
 .section {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
     width: 100%;
-    padding: 30px;
+    padding: 0 30px;
     margin: 0 0 20px 0;
 
     background: var(--main-section-color);

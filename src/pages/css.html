@@ -20,40 +20,47 @@
             <a href="html5.html" class="nav__button button">
                 <span>HTML 5</span>
             </a>
-            <a href="css.html" class="nav__button button">
+            <a href="#" class="nav__button button">
                 <span>CSS</span>
             </a>
-            <a href="css_architecture.html" class="nav__button button">
+            <a href="#" class="nav__button button">
                 <span>CSS Architecture</span>
             </a>
-            <a href="#" class="nav__button button">
+            <a href="git.html" class="nav__button button">
                 <span>Git</span>
             </a>
         </nav>
     </header>
     
     <main class="main light">
-        <div class="title-main box-inline-centered text-font-family-Indie-Flower">Git</div>
+        <div class="title-main box-inline-centered text-font-family-Indie-Flower">
+            <span>CSS</span>
+        </div>
     
         <article class="main__article">
     
-            <!-- semantic -->
+            <!-- Transformations -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Remove directory</div>
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Transformations</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://git-scm.com/docs/git-rm">
-                        <span>GIT Documentation</span>
-                    </a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew()">MDN</a>
                 </div>
     
                 <div class="content-section">
-                    <div class="title-text">Как удалить папку?</div>
-                    <div class="text text-dark-background">$ git rm -r test_dir</div>
-                    <div class="text text-dark-background">$ git commit -m "Removed test directory"</div>
-                    <div title="Change 'master'" class="text text-dark-background">$ git push origin master</div>
+                    <div class="title-text"></div>
+                    <ul class="list">
+                        <li class="title-text">transform: skew(deg, deg)
+                            <div>
+                                <span style="display: inline-block;width:70px; height:70px;background:pink;">normal</span>
+                                <span style="display: inline-block;width:70px; height:70px;background:wheat;transform:skew(-15deg)">skewed</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
+    
+            
     
         </article>
 

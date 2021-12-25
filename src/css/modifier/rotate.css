@@ -1,10 +1,10 @@
 
 
 .rotate {
-    animation: wheel-rotate 10s linear infinite forwards;
+    animation: rotate 10s linear infinite forwards;
 }
 
-@keyframes wheel-rotate {
+@keyframes rotate {
     0% {
         transform: rotate(0);
     }

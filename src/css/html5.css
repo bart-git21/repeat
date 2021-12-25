@@ -13,9 +13,6 @@
     align-items: center;
 }
 
-.semantic-header span, div {
-    margin: 0;
-}
 .semantic-header .content {
     background: #B97A95;
     display: grid;
@@ -33,9 +30,6 @@
 
 
 
-.semantic-main span, div {
-    margin: 0;
-}
 
 .semantic-main {
     background: #716F81;

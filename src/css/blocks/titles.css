@@ -1,44 +1,25 @@
 
+
+
 .title-index {
-    width: 50%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    color: var(--dark-color);
+    font-weight: 700;
     font-size: 6em;
-    font-weight: 900;
-    /* font-family: 'Lobster', cursive; */
-    font-family: 'Bad Script', cursive;
-    /* font-family: 'Comforter', cursive; */
-    /* font-family: 'Marck Script', cursive; */
-    letter-spacing: 7px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .title-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-weight: 700;
-    font-size: 50px;
+    font-size: 4em;
 }
 
 .title-section {
-    align-self: center;
+    position: relative;
     font-weight: 700;
-    font-size: 30px;
-    margin: 10px;
+    font-size: 2em;
+    padding: 10px;
 }
 
 .title-text {
     font-weight: 600;
-    padding: 5px 0;
-    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
 }
 

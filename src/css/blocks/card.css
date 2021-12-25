@@ -70,7 +70,7 @@
     width: 50%;
     position: absolute;
     right: 0;
-    top: 89px;
+    top: 0;
     display: inline-flex;
     flex-wrap: wrap;
 
@@ -90,7 +90,7 @@
 .nav-cards__wrap {
     display: inline-flex;
     width: 50%;
-    height: 300px;
+    height: 330px;
 
     perspective: 900px;
 }
@@ -166,7 +166,9 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-size: 59px;
+
+    word-wrap: normal;
+    font-size: 2vw;
     color: rgba(253, 251, 251, 0.8);
     font-family: "Arial Black", Gadget, sans-serif;
     text-shadow: 0px 0px 0 rgba(212, 65, 28, 0.3),

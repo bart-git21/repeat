@@ -1,19 +1,6 @@
 
 
-.text {
-    position: relative;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; */
-
-    display: block;
-    width: 100%;
-}
-
-
-/* small text */
+/* ============ разные размеры текста =============*/
 
 .text-small {
     display: inline-flex;
@@ -22,7 +9,6 @@
 
     transition: .4s;
 }
-
 .text-small a {
     margin-left: 20px;
 }
@@ -30,7 +16,15 @@
     scale: 1.1;
 }
 
-/* bold text */
+
+
+.text {
+    display: block;
+    width: 100%;
+}
+
+
+
 
 .text-bold {
     text-transform: uppercase;
@@ -38,6 +32,8 @@
 }
 
 
+
+/* ============ фон текста =============*/
 
 
 /* dark text  */
@@ -50,4 +46,28 @@
     padding: 0 20px;
     display: inline-block;
     line-height: 2em;
+}
+
+
+
+
+
+
+/* ========== шрифты текста ============== */
+
+.text-font-family-bad-script {
+
+    color: var(--dark-color);
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Bad Script', cursive;
+    /* font-family: 'Comforter', cursive; */
+    /* font-family: 'Marck Script', cursive; */
+    letter-spacing: 7px;
+}
+
+.text-font-family-Indie-Flower {
+
+    color: var(--dark-color);
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 5px;
 }

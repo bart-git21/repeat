@@ -1,0 +1,30 @@
+
+
+.box-inline-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-column-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box-left-side {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+/* ====== видимость блока ============*/
+
+.box-invisible {
+    opacity: 0;
+}
