@@ -47,12 +47,19 @@
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">html5book</a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://unicode-table.com/ru/html-entities/">unicode-table</a>
                 </div>
     
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
                 <div class="content-section">
                     <div class="title-text">Добавить иконку можно несколькими способами:</div>
                     <div class="text">
-                        <div class="button-blue button">
+                        <div class="button-blue button box-column-centered">
                             <a target="_blank" rel="noopener" href="https://unicode-table.com/en/">
                                 <span class="icon unicode-character">&#128386;</span>
                             </a>
@@ -62,7 +69,7 @@
                     </div>
 
                     <div class="text">
-                        <div class="button-blue button">
+                        <div class="button-blue button box-column-centered">
                             <a class="icon" target="_blank" rel="noopener" href="https://fonts.google.com/icons?selected=Material+Icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16.484 11.976l6.151-5.344v10.627zm-7.926.905l2.16 1.875c.339.288.781.462 1.264.462h.017h-.001h.014c.484 0 .926-.175 1.269-.465l-.003.002l2.16-1.875l6.566 5.639H1.995zM1.986 5.365h20.03l-9.621 8.356a.612.612 0 0 1-.38.132h-.014h.001h-.014a.61.61 0 0 1-.381-.133l.001.001zm-.621 1.266l6.15 5.344l-6.15 5.28zm21.6-2.441c-.24-.12-.522-.19-.821-.19H1.859a1.87 1.87 0 0 0-.835.197l.011-.005A1.856 1.856 0 0 0 0 5.855V18.027a1.86 1.86 0 0 0 1.858 1.858h20.283a1.86 1.86 0 0 0 1.858-1.858V5.859v-.004c0-.727-.419-1.357-1.029-1.66l-.011-.005z" fill="currentColor"/></svg>
                             </a>
@@ -72,7 +79,7 @@
                     </div>
 
                     <div class="text">
-                        <div class="button-blue button">
+                        <div class="button-blue button box-column-centered">
                             <a target="_blank" rel="noopener" href="https://icomoon.io/app/">
                                 <i class="icon icon-contact"></i>
                             </a>
@@ -81,6 +88,8 @@
                         иконочный шрифт
                     </div>
     
+                </div>
+                    </div>
                 </div>
             </section>
     
@@ -92,50 +101,56 @@
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Advanced">MDN</a>
                 </div>
     
-                <div class="content-section">
-                    <div class="title-text">Теги таблицы:</div>
-                    <div class="center-border">
-                        <table class="table">
-                            <caption title="для скринридеров. сразу после Table">a caption</caption>
-                            
-                            <thead>
-                                <tr title="для css. thead > tr > 3 th">
-                                    <th>th</th>
-                                    <th>th</th>
-                                    <th>th</th>
-                                </tr>
-                            </thead>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
 
-                            <tbody title="для css. tbody > tr > td">
-                                <tr>
-                                    <td>td</td>
-                                    <td>td</td>
-                                    <td>td</td>
-                                </tr>
-                                <tr>
-                                    <td>td</td>
-                                    <td>td</td>
-                                    <td rowspan="2">td rowspan=2</td>
-                                </tr>
-                                <tr>
-                                    <td>td</td>
-                                    <td>td</td>
-                                </tr>
-                            </tbody>
 
-                            <tfoot title="для css. tfoot > tr > td">
-                                <tr >
-                                    <td colspan="2">td colspan=2</td>
-                                    <td>td </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
+                        <div class="content-section">
+                            <div class="title-text">Теги таблицы:</div>
+                            <div class="center-border">
+                                <table class="table">
+                                    <caption title="для скринридеров. сразу после Table">a caption</caption>
+                                    
+                                    <thead>
+                                        <tr title="для css. thead > tr > 3 th">
+                                            <th>th</th>
+                                            <th>th</th>
+                                            <th>th</th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody title="для css. tbody > tr > td">
+                                        <tr>
+                                            <td>td</td>
+                                            <td>td</td>
+                                            <td>td</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td</td>
+                                            <td>td</td>
+                                            <td rowspan="2">td rowspan=2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td</td>
+                                            <td>td</td>
+                                        </tr>
+                                    </tbody>
+        
+                                    <tfoot title="для css. tfoot > tr > td">
+                                        <tr >
+                                            <td colspan="2">td colspan=2</td>
+                                            <td>td </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+        
+                            <div class="text" title="table>tr>td">Таблицу можно вложить в другую таблицу</div>
+            
+                        </div>
                     </div>
-
-    
-                </div>
-                <div class="content-section">
-                    <div class="text" title="table>tr>td">Таблицу можно вложить в другую таблицу</div>
                 </div>
             </section>
     
@@ -146,91 +161,103 @@
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">MDN</a>
                 </div>
-                <div class="text">SVG — это как отдельная HTML-страница.</div>
-                <div class="title-text box-inline-centered">Как добавить SVG в HTML страницу:</div>
-                <ul class="list">
-                    <li>
-                        <span class="text-bold">object</span>
-                        <div>позволяет применять скрипты. Это самый надежный метод для обеспечения интерактивности.</div>
-                        <div></div>
-                        <div class="text-dark-background">
-                            <div>&#60object type="image/svg+xml" data="picture.svg"></div>
-                            <div>&#60img src="picture.png"></div>
-                            <div>&#60/object></div>                            
-                        </div>
-                        <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
-                        <div>Cons! CSS стили придется прописывать в SVG файл.</div>
-                        <div >Запуск SVG анимации.
-                            <span class="button-checkbox button">
-                                <input type="checkbox" name="object_svg" id="object_svg" >
-                                <label for="object_svg"></label>
-                            </span>
-                        </div>
-                        <div class="center-border">
-                            <object id="wheel" data="../media/wheel.svg" type="image/svg+xml"></object>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="text-bold">img</span>
-                        <div>используется когда нет необходимости добавлять интерактивность.</div>
-                        <div class="text-dark-background">
-                            <div>&#60img src="fallback.png" srcset="equilateral.svg"></div>
-                        </div>
-                        <div>Pros! "srcset": older browsers will load the PNG instead SVG.</div>
-                        <div>Cons! SVG can't be manipulated with JavaScript.</div>
-                    </li>
-                    <li>
-                        <span class="text-bold">css background image.</span>
-                        <div>используется когда нет необходимости добавлять интерактивность.</div>
-                        <div class="text-dark-background">
-                            <div>
-                                {background: url("fallback.png") no-repeat center;<br>
-                                background-image: url("image.svg");<br>
-                                background-size: contain;}
-                            </div>
-                        </div>
-                        <div>Pros! use fallback - older browsers will stick with the PNG that they understand, while newer browsers will load the SVG.</div>
-                        <div>Cons! SVG can't be manipulated with JavaScript.</div>
-                    </li>
-                    <li>
-                        <span class="text-bold">iframe</span>
-                        <div>позволяет применять скрипты.</div>
-                        <div class="text-dark-background">
-                            <div>&#60 iframe src="triangle.svg" width="500" height="500" sandbox></div>
-                            <div>&#60img src="fallback.png"/></div>
-                            <div>&#60/iframe></div>
-                        </div>
-                        <div>используется когда нет необходимости добавлять интерактивность.</div>
-                        <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
-                    </li>
-                    <li>
-                        <span class="text-bold">SVG inline</span>
-                        <div>позволяет применять скрипты.</div>
-                        <div class="text-dark-background">
-                            <div>&#60svg width="300" height="200"></div>
-                            <div>&#60rect width="100%" height="100%" fill="green"></div>
-                            <div>&#60/svg></div>
-                        </div>
-                        <div>Pros! You can use JavaScript, animation and you can style with CSS. also you can use any SVG presentation attribute as a CSS property.</div>
-                        <div>Cons! Extra SVG code increases the size of your HTML file.</div>
-                        <div>Cons! этот метод не позволяет поддерживать кэширование.</div>
-                    </li>
-                </ul>
+
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
 
 
-                
-
-                <div class="title-text box-inline-centered">linearGradient</div>                <div class="text-small">
-                    <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">MDN</a>
-                </div>
-                <div class="text">в файле svg прописать:</div>
-                <div class="text-dark-background">&#60linearGradient id="myGradient"></div>
-                <div class="text-dark-background">&#60stop offset="5%" stop-color="gold">...</div>
-                <div class="text-dark-background">&#60/linearGradient"></div>
-                <div class="text-dark-background">&#60path ... fill="url('#myGradient')" /></div>
-                <object data="../media/wheel_gradient.svg" type="image/svg+xml"></object>
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
+                        <div class="content-section">
+                            <div class="text">SVG — это как отдельная HTML-страница.</div>
+                            <div class="title-text box-inline-centered">Как добавить SVG в HTML страницу:</div>
+                            <ul class="list">
+                                <li>
+                                    <span class="text-bold">object</span>
+                                    <div>позволяет применять скрипты. Это самый надежный метод для обеспечения интерактивности.</div>
+                                    <div></div>
+                                    <div class="text-dark-background">
+                                        <div>&#60object type="image/svg+xml" data="picture.svg"></div>
+                                        <div>&#60img src="picture.png"></div>
+                                        <div>&#60/object></div>                            
+                                    </div>
+                                    <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
+                                    <div>Cons! CSS стили придется прописывать в SVG файл.</div>
+                                    <div >Запуск SVG анимации.
+                                        <span class="button-checkbox button">
+                                            <input type="checkbox" name="object_svg" id="object_svg" >
+                                            <label for="object_svg"></label>
+                                        </span>
+                                    </div>
+                                    <div class="center-border">
+                                        <object id="wheel" data="../media/wheel.svg" type="image/svg+xml"></object>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="text-bold">img</span>
+                                    <div>используется когда нет необходимости добавлять интерактивность.</div>
+                                    <div class="text-dark-background">
+                                        <div>&#60img src="fallback.png" srcset="equilateral.svg"></div>
+                                    </div>
+                                    <div>Pros! "srcset": older browsers will load the PNG instead SVG.</div>
+                                    <div>Cons! SVG can't be manipulated with JavaScript.</div>
+                                </li>
+                                <li>
+                                    <span class="text-bold">css background image.</span>
+                                    <div>используется когда нет необходимости добавлять интерактивность.</div>
+                                    <div class="text-dark-background">
+                                        <div>
+                                            {background: url("fallback.png") no-repeat center;<br>
+                                            background-image: url("image.svg");<br>
+                                            background-size: contain;}
+                                        </div>
+                                    </div>
+                                    <div>Pros! use fallback - older browsers will stick with the PNG that they understand, while newer browsers will load the SVG.</div>
+                                    <div>Cons! SVG can't be manipulated with JavaScript.</div>
+                                </li>
+                                <li>
+                                    <span class="text-bold">iframe</span>
+                                    <div>позволяет применять скрипты.</div>
+                                    <div class="text-dark-background">
+                                        <div>&#60 iframe src="triangle.svg" width="500" height="500" sandbox></div>
+                                        <div>&#60img src="fallback.png"/></div>
+                                        <div>&#60/iframe></div>
+                                    </div>
+                                    <div>используется когда нет необходимости добавлять интерактивность.</div>
+                                    <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
+                                </li>
+                                <li>
+                                    <span class="text-bold">SVG inline</span>
+                                    <div>позволяет применять скрипты.</div>
+                                    <div class="text-dark-background">
+                                        <div>&#60svg width="300" height="200"></div>
+                                        <div>&#60rect width="100%" height="100%" fill="green"></div>
+                                        <div>&#60/svg></div>
+                                    </div>
+                                    <div>Pros! You can use JavaScript, animation and you can style with CSS. also you can use any SVG presentation attribute as a CSS property.</div>
+                                    <div>Cons! Extra SVG code increases the size of your HTML file.</div>
+                                    <div>Cons! этот метод не позволяет поддерживать кэширование.</div>
+                                </li>
+                            </ul>
             
+            
+            
+            
+                            <div class="title-text box-inline-centered">linearGradient</div>                <div class="text-small">
+                                <div class="text-small-header">Источники:</div>
+                                <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">MDN</a>
+                            </div>
+                            <div class="text">в файле svg прописать:</div>
+                            <div class="text-dark-background">&#60linearGradient id="myGradient"></div>
+                            <div class="text-dark-background">&#60stop offset="5%" stop-color="gold">...</div>
+                            <div class="text-dark-background">&#60/linearGradient"></div>
+                            <div class="text-dark-background">&#60path ... fill="url('#myGradient')" /></div>
+                            <object data="../media/wheel_gradient.svg" type="image/svg+xml"></object>    
+        
+                        </div>
+                    </div>
+                </div>
+
             
             
             </section>
@@ -246,6 +273,7 @@
 
 
     <script src="../script/rotate.js"></script>
+    <script src="../script/popup.js"></script>
     
 </body>
 </html>

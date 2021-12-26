@@ -49,15 +49,22 @@
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model">MDN</a>
                 </div>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read more...</span></div>
     
-                <div class="content-section">
-                    <div class="title-text">Document . documentElement</div>
-                    <div class="text">обратиться к корневому элементу документа (для HTML документа это html).</div>
-                    <span class="text-dark-background">const element = document.documentElement;</span>
-
-                    <ul class="list">
-                        <li></li>
-                    </ul>
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
+                        
+                        <div class="content-section">
+                            <ul class="list">
+                                <li class="title-text">Document . documentElement
+                                    <div class="text">это свойство.</div>
+                                    <div class="text">позволяет обратиться к корневому элементу документа (для HTML документа это html).</div>
+                                    <span class="text-dark-background">const element = document.documentElement;</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
     
@@ -72,7 +79,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="../script/popup.js"></script>
     
 </body>
 </html>

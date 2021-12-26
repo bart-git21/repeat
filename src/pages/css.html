@@ -50,17 +50,25 @@
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://webref.ru/css/value/hue-rotate">webref</a>
                 </div>
     
-                <div class="content-section">
-                    <div class="title-text"></div>
-                    <ul class="list">
-                        <li class="title-text">filter: hue-rotate(45deg)
-                            <div style="display: flex;">
-                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;">pink color</span>
-                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;filter:hue-rotate(45deg);">поворот оттенка на цветовом круге = 45deg</span>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
+                        <div class="content-section">
+                            <div class="title-text"></div>
+                            <ul class="list">
+                                <li class="title-text">filter: hue-rotate(45deg)
+                                    <div style="display: flex;">
+                                        <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;">pink color</span>
+                                        <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;filter:hue-rotate(45deg);">поворот оттенка на цветовом круге = 45deg</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
             </section>
     
             <!-- Transformations -->
@@ -71,16 +79,24 @@
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew()">MDN</a>
                 </div>
     
-                <div class="content-section">
-                    <div class="title-text"></div>
-                    <ul class="list">
-                        <li class="title-text">transform: skew(-15deg, 0)
-                            <div>
-                                <span style="display: inline-block;width:70px; height:70px;background:pink;">normal</span>
-                                <span style="display: inline-block;width:70px; height:70px;background:wheat;transform:skew(-15deg)">skewed</span>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="popup__close box-inline-centered">&#10006</div>
+                        <div class="content-section">
+                            <div class="title-text"></div>
+                            <ul class="list">
+                                <li class="title-text">transform: skew(-15deg, 0)
+                                    <div>
+                                        <span style="display: inline-block;width:70px; height:70px;background:pink;">normal</span>
+                                        <span style="display: inline-block;width:70px; height:70px;background:wheat;transform:skew(-15deg)">skewed</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
     
@@ -97,6 +113,7 @@
 
 
     <script src="script.js"></script>
+    <script src="../script/popup.js"></script>
     
 </body>
 </html>

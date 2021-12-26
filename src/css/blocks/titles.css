@@ -18,8 +18,15 @@
     padding: 10px;
 }
 
+/* .title-section {
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 55px;
+} */
 .title-text {
     font-weight: 600;
-    padding: 0 0 10px 0;
+    font-size: 1.2em;
+    border-bottom: 1px double var(--dark-color);
+    margin: 10px auto;
 }
 
