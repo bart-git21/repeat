@@ -54,6 +54,16 @@
     --deg-X-logo: -5deg;
 }
 .color-theme-6 {
+    --color1: #f2fedc;
+    --color2: #efd81d;
+    --color3: #e9d211;
+    --color4: #efbb1d;
+    --color5: #afef1d;
+    
+    --deg-Y-logo: -5deg;
+    --deg-X-logo: -5deg;
+}
+.color-theme-7 {
     --color1: #30a14e;
     --color2: #009b77;
     --color3: #00919b;
@@ -69,7 +79,7 @@
 .nav-cards__scene {
     width: 50%;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 0;
     display: inline-flex;
     flex-wrap: wrap;
@@ -89,8 +99,8 @@
 
 .nav-cards__wrap {
     display: inline-flex;
-    width: 50%;
-    height: 330px;
+    width: 33.33333%;
+    height: 310px;
 
     perspective: 900px;
 }

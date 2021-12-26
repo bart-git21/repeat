@@ -23,8 +23,11 @@
             <a href="#" class="nav__button button">
                 <span>CSS</span>
             </a>
-            <a href="#" class="nav__button button">
+            <a href="css_architecture.html" class="nav__button button">
                 <span>CSS Architecture</span>
+            </a>
+            <a href="dom.html" class="nav__button button">
+                <span>DOM</span>
             </a>
             <a href="git.html" class="nav__button button">
                 <span>Git</span>
@@ -39,6 +42,27 @@
     
         <article class="main__article">
     
+            <!-- Filter -->
+            <section class="section box-flex-column">
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Filters</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://webref.ru/css/value/hue-rotate">webref</a>
+                </div>
+    
+                <div class="content-section">
+                    <div class="title-text"></div>
+                    <ul class="list">
+                        <li class="title-text">filter: hue-rotate(45deg)
+                            <div style="display: flex;">
+                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;">pink color</span>
+                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;filter:hue-rotate(45deg);">поворот оттенка на цветовом круге = 45deg</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+    
             <!-- Transformations -->
             <section class="section box-flex-column">
                 <div class="title-section box-inline-centered text-font-family-Indie-Flower">Transformations</div>
@@ -50,7 +74,7 @@
                 <div class="content-section">
                     <div class="title-text"></div>
                     <ul class="list">
-                        <li class="title-text">transform: skew(deg, deg)
+                        <li class="title-text">transform: skew(-15deg, 0)
                             <div>
                                 <span style="display: inline-block;width:70px; height:70px;background:pink;">normal</span>
                                 <span style="display: inline-block;width:70px; height:70px;background:wheat;transform:skew(-15deg)">skewed</span>

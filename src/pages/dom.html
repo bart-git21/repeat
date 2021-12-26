@@ -26,37 +26,41 @@
             <a href="css_architecture.html" class="nav__button button">
                 <span>CSS Architecture</span>
             </a>
-            <a href="dom.html" class="nav__button button">
+            <a href="#" class="nav__button button">
                 <span>DOM</span>
             </a>
-            <a href="#" class="nav__button button">
+            <a href="git.html" class="nav__button button">
                 <span>Git</span>
             </a>
         </nav>
     </header>
     
     <main class="main light">
-        <div class="title-main box-inline-centered text-font-family-Indie-Flower">Git</div>
+        <div class="title-main box-inline-centered text-font-family-Indie-Flower">
+            <span>DOM</span>
+        </div>
     
         <article class="main__article">
     
-            <!-- semantic -->
+            <!-- Document -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Remove directory</div>
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Document</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://git-scm.com/docs/git-rm">
-                        <span>GIT Documentation</span>
-                    </a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model">MDN</a>
                 </div>
     
                 <div class="content-section">
-                    <div class="title-text">Как удалить папку?</div>
-                    <div class="text text-dark-background">$ git rm -r test_dir</div>
-                    <div class="text text-dark-background">$ git commit -m "Removed test directory"</div>
-                    <div title="Change 'master'" class="text text-dark-background">$ git push origin master</div>
+                    <div class="title-text">Document . documentElement</div>
+                    <div class="text">обратиться к корневому элементу документа (для HTML документа это html).</div>
+                    <span class="text-dark-background">const element = document.documentElement;</span>
+
+                    <ul class="list">
+                        <li></li>
+                    </ul>
                 </div>
             </section>
+    
     
         </article>
 
