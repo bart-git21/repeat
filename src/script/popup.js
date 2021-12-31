@@ -10,8 +10,8 @@ for (let i = 0; i<open_popup.length; i++) {
 }
 
 for (let i = 0; i<open_popup.length; i++) {
-    close_popup[i].onclick = () => {
+    popup[i].addEventListener("click", function(e) {
+        if (e.currentTarget != e.target) return;
         popup[i].style.display = "none";
-    }
-
+    })
 }

@@ -84,17 +84,3 @@
     padding: 20px 15px;
     position: relative;
 }
-
-.popup__close {
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-
-    color: rgba(255, 0, 0, 0.4);
-    font-size: 2em;
-}
-.popup__close:hover {
-    color: red;
-    font-size: 2em;
-}
