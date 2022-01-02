@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/fonts.css">
+    
+    
+</head>
+<body>
+
+    <header class="header light">
+        <a href="../../index.html" class="logo">My Mind Palace</a>
+        <nav class="nav">
+            <a href="html.html" class="nav__button button">
+                <span>HTML</span>
+            </a>
+            <a href="html5.html" class="nav__button button">
+                <span>HTML 5</span>
+            </a>
+            <a href="css.html" class="nav__button button">
+                <span>CSS</span>
+            </a>
+            <a href="css_architecture.html" class="nav__button button">
+                <span>CSS Architecture</span>
+            </a>
+            <a href="dom.html" class="nav__button button">
+                <span>DOM</span>
+            </a>
+            <a href="#" class="nav__button button">
+                <span>javascript</span>
+            </a>
+            <a href="git.html" class="nav__button button">
+                <span>Git</span>
+            </a>
+        </nav>
+    </header>
+    
+    <main class="main light">
+        <div class="title-main box-inline-centered text-font-family-Indie-Flower">
+            <span>JavaScript</span>
+        </div>
+    
+        <article class="main__article">
+    
+            <!-- Event  -->
+            <section class="section box-flex-column">
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Event</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/object">learn.javascript</a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="http://code.mu/ru/javascript/book/prime/dom/object-Event/intro/">code.mu</a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://itchief.ru/javascript/browser-events">itchief</a>
+                </div>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section box-column-centered text-font-family-Indie-Flower">Event</div>
+                            <div class="text">получить объект Event (например, click):</div>
+                            <div class="text-dark-background">elem . addEventListener ( 'click', function (event) {<br>console.log (event) ;<br>});</div>
+                            
+                            <span class="title-text">addEventListener ( "mousemove" , foo)</span>
+                            <div class="text">координаты события "mousemove" :</div>
+                            <div class="text-dark-background">function foo(event) { console.log ( event. clientX ); }</div>
+                            <div class="text-dark-background">function foo(event) { console.log ( event. offsetX ); }</div>
+                            <div class="text-dark-background">function foo(event) { console.log ( event. pageX ); }</div>
+                            <div class="text-dark-background">function foo(event) { console.log ( event. screenX ); }</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Function  -->
+            <section class="section box-flex-column">
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Function</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/object">learn.javascript</a>
+                </div>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section box-column-centered text-font-family-Indie-Flower">Function</div>
+                            <div class="text">функции являются объектами.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Object  -->
+            <section class="section box-flex-column">
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Object</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/object">learn.javascript</a>
+                </div>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section box-column-centered text-font-family-Indie-Flower">Object</div>
+                            <div class="text">хранят множество значений как свойства.</div>
+                            <div class="text">можно хранить функцию как одно из свойств объекта.</div>
+                            
+                            <span class="title-text">встроенные объекты</span>
+                            <div class="text">Например, те, которые работают с датами, ошибками, HTML-элементами и т.д. </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Primitives  -->
+            <section class="section box-flex-column">
+                <div class="title-section box-inline-centered text-font-family-Indie-Flower">Primitives </div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/primitives-methods">learn.javascript</a>
+                </div>
+                <div class="button popup-button box-column-centered" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section box-column-centered text-font-family-Indie-Flower">Primitives </div>
+                            <span class="title-text">Типы</span>
+                            <div class="text">string, number, boolean, symbol, null, undefined и bigint.</div>
+                            
+                            <span class="title-text">Методы и свойства</span>
+                            <div class="text">чтобы получить доступ к методам и свойствам, движок JS создаёт «объект-обертку» (а после удаляет).</div>
+                            <div class="text">каждый объект имеет свой набор методов.</div>
+                            <div class="text">обертка нужна, т.к. примитивы – не объекты, примитивы – значение.</div>
+                            <div class="text"></div>
+                            <div class="text">null и undefined - исключения, у них нет «объектов-оберток».</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+    
+        </article>
+
+    </main>
+
+
+
+
+
+
+
+    <script src="../script/popup.js"></script>
+    
+</body>
+</html>

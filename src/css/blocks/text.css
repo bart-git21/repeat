@@ -19,9 +19,9 @@
 
 
 .text {
-    /* display: block; */
     width: 100%;
     font-weight: 400;
+    margin: 5px 0;
 }
 
 
@@ -44,7 +44,8 @@
     background: var(--dark-color);
     width: 100%;
     color: #fff;
-    padding: 0 20px;
+    margin: 5px 0;
+    padding: 0 10px;
     display: inline-block;
     line-height: 2em;
 }

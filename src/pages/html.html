@@ -29,6 +29,9 @@
             <a href="dom.html" class="nav__button button">
                 <span>DOM</span>
             </a>
+            <a href="javascript.html" class="nav__button button">
+                <span>javascript</span>
+            </a>
             <a href="git.html" class="nav__button button">
                 <span>Git</span>
             </a>
@@ -98,6 +101,7 @@
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Advanced">MDN</a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/html-table/">html5book</a>
                 </div>
     
                 <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
@@ -106,47 +110,66 @@
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-text">Теги таблицы:</div>
+                            <div class="title-text">HTML</div>
+                            
                             <div class="center-border">
-                                <table class="table">
-                                    <caption title="для скринридеров. сразу после Table">a caption</caption>
-                                    
-                                    <thead>
-                                        <tr title="для css. thead > tr > 3 th">
-                                            <th>th</th>
-                                            <th>th</th>
-                                            <th>th</th>
-                                        </tr>
-                                    </thead>
-        
-                                    <tbody title="для css. tbody > tr > td">
-                                        <tr>
-                                            <td>td</td>
-                                            <td>td</td>
-                                            <td>td</td>
-                                        </tr>
-                                        <tr>
-                                            <td>td</td>
-                                            <td>td</td>
-                                            <td rowspan="2">td rowspan=2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>td</td>
-                                            <td>td</td>
-                                        </tr>
-                                    </tbody>
-        
-                                    <tfoot title="для css. tfoot > tr > td">
-                                        <tr >
-                                            <td colspan="2">td colspan=2</td>
-                                            <td>td </td>
-                                        </tr>
-                                    </tfoot>
+                                <table>
+                                    <tr>
+                                        <td>table >
+                                            <table class="table">
+                                                <caption title="для скринридеров. сразу после Table">caption</caption>
+                                                
+                                                <thead>
+                                                    <tr title="для css. thead > tr > 3 th">
+                                                        <th>thead ></th>
+                                                        <th>th</th>
+                                                        <th>th</th>
+                                                    </tr>
+                                                </thead>
+                    
+                                                <tbody title="для css. tbody > tr > td">
+                                                    <tr>
+                                                        <td rowspan="3">tbody ></td>
+                                                        <td>tr ></td>
+                                                        <td>td</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>tr ></td>
+                                                        <td rowspan="2">td rowspan=2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>tr ></td>
+                                                    </tr>
+                                                </tbody>
+                    
+                                                <tfoot title="для css. tfoot > tr > td">
+                                                    <tr >
+                                                        <td>tfoot ></td>
+                                                        <td colspan="2">td colspan=2</td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
-        
                             <div class="text" title="table>tr>td">Можно вложить таблицу в другую таблицу</div>
-            
+
+                            <div class="title-text">CSS</div>        
+                            <div class="text-bold"></div>
+                            <ul class="list">
+                                <li>Границы. по умолчанию отсутствуют.
+                                    <span class="text-dark-background">table {border: 1px solid grey;}</span>
+                                </li>
+                                <li>Промежутки между ячейками. установлены по умолчанию.
+                                    <span class="text-dark-background">table {border-collapse: collapse;}</span>
+                                </li>
+                                <li>Ширина по умолчанию равна ширине содержимого.
+                                    <span class="text-dark-background">table {width: 100%;}</span>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
