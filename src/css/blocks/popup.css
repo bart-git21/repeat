@@ -52,11 +52,10 @@
 
 .popup {
     width: 100%;
-    min-height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(171, 169, 187, 0.8);
     z-index: 2;
 
     transition: all .5s linear;
@@ -82,5 +81,11 @@
     background: #fff;
     border-radius: 10px;
     padding: 20px 15px;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* border: 2px solid #46466e; */
+    box-shadow: 5px 5px 15px #46466e,
+                -5px -5px 15px #46466e;
 }
