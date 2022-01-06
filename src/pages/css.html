@@ -15,6 +15,66 @@
             border: 3px solid #444;
         }
 
+        .pink {
+            width:170px;
+            height:170px;
+            background:pink;
+            border: 1px solid #aaa;
+            user-select: none;
+            padding: 5px;
+            margin: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .pink:hover {
+            color: transparent;
+        }
+        
+        .hue-rotate-orange:hover {
+            filter:hue-rotate(90deg);
+        }
+        .hue-rotate-green:hover {
+            filter:hue-rotate(180deg);
+        }
+        .hue-rotate-blue:hover {
+            filter:hue-rotate(270deg);
+        }
+        .hue-rotate-animation:hover {
+            animation: changeColor 2s linear infinite;
+        }
+
+        @keyframes changeColor {
+            0% {filter:hue-rotate(0);border: 1px solid transparent;}
+            100% {filter:hue-rotate(360deg);border: 1px solid transparent;}
+        }
+
+        .hue-rotate-orange:hover:before,
+        .hue-rotate-green:hover:before,
+        .hue-rotate-blue:hover:before,
+        .hue-rotate-animation:hover:before
+        {
+            content: "цветовой круг повернулся на 90deg";
+            line-height: 1.1;
+            font-size: 1.4em;
+            color: var(--dark-color);
+            font-weight: 600;
+
+            position: absolute;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 90%;
+            height: 100%;
+        }
+        .hue-rotate-green:hover:before {content: "цветовой круг повернулся на 180deg";}
+        .hue-rotate-blue:hover:before {content: "цветовой круг повернулся на 270deg";}
+        .hue-rotate-animation:hover:before {content: "цвет будет меняться бесконечно";}
+
+
+
     </style>
     
 </head>
@@ -48,7 +108,7 @@
     </header>
     
     <main class="main light">
-        <div class="title-main box-inline-centered text-font-family-Indie-Flower">
+        <div class="title-main inline-content text-font-family-Indie-Flower">
             <span>CSS</span>
         </div>
     
@@ -56,36 +116,51 @@
     
             <!-- border -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">border- :</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">border- :</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/css3-borders/">html5book</a>
                 </div>
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
                             <div class="title-text">border-radius</div>
-                            <div style="border-radius: 10px 40px;" class="border-box"></div>
-                            <div class="text-dark-background">border-radius: 10px 40px;</div>
-                            <div style="border-radius: 0 50%;" class="border-box"></div>
-                            <div class="text-dark-background">border-radius: 0 50%;</div>
-                            <div style="border-radius: 0 10px 40px;" class="border-box"></div>
-                            <div class="text-dark-background">border-radius: 0 10px 40px;</div>
-                            <div style="border-radius: 0 10px 40px 20px;" class="border-box"></div>
-                            <div class="text-dark-background">border-radius: 0 10px 40px 20px;</div>
-                            <div style="border-radius: 20px / 40px;" class="border-box"></div>
+                            <code>border-radius: 10px 40px;</code>
+                            <div class="result-view">
+                                <div style="border-radius: 10px 40px;" class="border-box"></div>
+                            </div>
+                            <code>border-radius: 0 50%;</code>
+                            <div class="result-view">
+                                <div style="border-radius: 0 50%;" class="border-box"></div>
+                            </div>
+                            <code>border-radius: 0 10px 40px;</code>
+                            <div class="result-view">
+                                <div style="border-radius: 0 10px 40px;" class="border-box"></div>
+                            </div>
+                            <code>border-radius: 0 10px 40px 20px;</code>
+                            <div class="result-view">
+                                <div style="border-radius: 0 10px 40px 20px;" class="border-box"></div>
+                            </div>
+                            <code>border-radius: 20px / 40px;</code>
+                            <div class="result-view">
+                                <div style="border-radius: 20px / 40px;" class="border-box"></div>
+                            </div>
                             <div class="text">Значения, заданные через /, определяют горизонтальные и вертикальные радиусы</div>
-                            <div class="text-dark-background">border-radius: 20px / 40px;</div>
+
 
                             <div class="title-text">border-image</div>
-                            <div style="border: 5px solid transparent;border-image: linear-gradient(transparent 0%, red 100%);border-image-slice: 1;" class="border-box"></div>
-                            <div class="text-dark-background">border: 5px solid transparent;<br>border-image: linear-gradient(transparent 0%, red 100%);<br>border-image-slice: 1;</div>
+                            <code>border: 5px solid transparent;<br>border-image: linear-gradient(transparent 0%, red 100%);<br>border-image-slice: 1;</code>
+                            <div class="result-view">
+                                <div style="border: 5px solid transparent;border-image: linear-gradient(transparent 0%, red 100%);border-image-slice: 1;" class="border-box"></div>
+                            </div>
 
                             <div class="title-text">border-top</div>
-                            <div style="border-top: none; border-radius: 50%;" class="border-box"></div>
-                            <div class="text-dark-background">border-top: none;<br>border-radius: 50%;</div>
+                            <code>border-top: none;<br>border-radius: 50%;</code>
+                            <div class="result-view">
+                                <div style="border-top: none; border-radius: 50%;" class="border-box"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,39 +169,39 @@
     
             <!-- column -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">column- :</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">column- :</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/css3-columns/#column-rule-color">html5book</a>
                 </div>
                 <div class="text">если содержимое переполняет колонку, оно выходит за ее границы и не обрезается. решение:</div>
-                <div class="text-dark-background">width: 100%;</div>
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <code>width: 100%;</code>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
                             <div class="title-text">column-width</div>
                             <div class="text">% не применяются</div>
-                            <div class="text-dark-background">column-width: 100px;</div>
+                            <code>column-width: 100px;</code>
                             <div class="title-text">column-count</div>
-                            <div class="text-dark-background">column-count: 2;</div>
+                            <code>column-count: 2;</code>
                             <div class="title-text">column-gap</div>
                             <div class="text">разрыв между колонками.</div>
                             <div class="text">1 em по умолчанию.</div>
-                            <div class="text-dark-background">column-gap: normal; </div>
+                            <code>column-gap: normal; </code>
                             <div class="title-text">column-rule</div>
                             <div class="text">является сокращенной записью свойств column-rule-width column-rule-style column-rule-color. </div>
                             <div class="title-text">column-rule-width</div>
                             <div class="text">Не работает без свойства column-rule-style. </div>
-                            <div class="text-dark-background">column-rule-width: thin;</div>
+                            <code>column-rule-width: thin;</code>
                             <div class="title-text">column-rule-style</div>
-                            <div class="text-dark-background">column-rule-style: dotted;</div>
+                            <code>column-rule-style: dotted;</code>
                             <div class="title-text">column-rule-color</div>
-                            <div class="text-dark-background">column-rule-color: pink;</div>
+                            <code>column-rule-color: pink;</code>
                             <div class="title-text">column-fill</div>
                             <div class="text">Заполнение колонок содержимым</div>
-                            <div class="text-dark-background">column-fill: auto;</div>
+                            <code>column-fill: auto;</code>
                         </div>
                     </div>
                 </div>
@@ -135,21 +210,23 @@
     
             <!-- Filter -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">filter:</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">filter:</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://webref.ru/css/value/hue-rotate">webref</a>
                 </div>
     
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
                             <div class="title-text">filter : hue-rotate(45deg)</div>
-                            <div style="display: flex;">
-                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;">pink color</span>
-                                <span class="text" style="display: inline-block;width:110px; height:110px;background:pink;filter:hue-rotate(45deg);">поворот оттенка на цветовом круге = 45deg</span>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span class="pink hue-rotate-orange">изменить цвет</span>
+                                <span class="pink hue-rotate-green">изменить цвет</span>
+                                <span class="pink hue-rotate-blue">изменить цвет</span>
+                                <span class="pink hue-rotate-animation">анимация</span>
                             </div>
                         </div>
                     </div>
@@ -159,37 +236,37 @@
     
             <!-- List -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">list- :</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">list- :</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/css-spiski/">html5book</a>
                 </div>
     
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-section box-column-centered text-font-family-Indie-Flower">List</div>
+                            <div class="title-section column-content text-font-family-Indie-Flower">List</div>
 
                             <div class="title-text">list-style-type</div>
                             тип маркера (кружок, римские цифры, квадрат и т.д.) 
-                            <ol>
+                            <ol class="result-view">
                                 <li style="list-style-position:inside;list-style-type: lower-roman;">lower-roman</li>
                                 <li style="list-style-position:inside;list-style-type: upper-roman;">upper-roman</li>
                                 <li style="list-style-position:inside;list-style-type: square;">square</li>
                             </ol>
                             <div class="title-text">list-style-image</div>
                             маркер в виде рисунка или градиента
-                            <ul>
+                            <ul class="result-view">
                                 <li style="list-style-position:inside;list-style-image:linear-gradient(#3D0000, #FF0000);">linear-gradient()</li>
                             </ul>
                             <div class="title-text">list-style-position</div>
                             маркер расположен вне или внутри блока с текстом.
-                            <ol>
-                                <li style="list-style-position:inside;">inside position</li>
-                                <li style="list-style-position:outside;">outside position</li>
+                            <ol class="result-view">
+                                <li style="list-style-position:inside;">inside marker position</li>
+                                <li style="list-style-position:outside;">outside marker position</li>
                             </ol>
                         </div>
                     </div>
@@ -198,22 +275,54 @@
     
             <!-- Transformations -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">transform:</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">transform:</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew()">MDN</a>
                 </div>
     
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
+                            <div class="text">трансформировать можно элементы с display: block; display: inline-block; а также display:table-row, table-row-group, table-header-group, table-footer-group, table-cell или table-caption.</div>
+
+                            <div class="title-text">transform: rotate(15deg)</div>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:pink;">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:wheat;transform:rotate(15deg)">rotate</span>
+                            </div>
+                            
+                            <div class="title-text">transform: rotateY(15deg)</div>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:pink;">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:wheat;transform:rotateY(15deg)">rotate Y</span>
+                            </div>
+                            
+                            <div class="title-text">transform: scaleX(-1)</div>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:linear-gradient(to right, red, pink);">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:linear-gradient(to right, red, pink);transform:scaleX(-1)">зеркальное отражение</span>
+                            </div>
+                            
+                            <div class="title-text">transform: scaleX(1.5)</div>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:linear-gradient(to right, red, pink);">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:linear-gradient(to right, red, pink);transform:scaleX(1.5) translateX(10px)">scale X</span>
+                            </div>
+
                             <div class="title-text">transform: skew(-15deg, 0)</div>
-                            <div>
-                                <span style="display: inline-block;width:70px; height:70px;background:pink;">normal</span>
-                                <span style="display: inline-block;width:70px; height:70px;background:wheat;transform:skew(-15deg)">skewed</span>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:pink;">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:wheat;transform:skew(-15deg)">skewed</span>
+                            </div>
+                            
+                            <div class="title-text">transform: translateY(-30px)</div>
+                            <div class="result-view" style="flex-direction: row;">
+                                <span style="display: inline-block;width:100px; height:100px;background:pink;">normal</span>
+                                <span style="display: inline-block;width:100px; height:100px;background:wheat;transform:translateY(-30px)">translate Y</span>
                             </div>
                         </div>
                     </div>

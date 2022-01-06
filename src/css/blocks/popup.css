@@ -3,7 +3,7 @@
 /* index popup*/
 
 .title-section .popup-text {
-    width: 200%;
+    width: 700px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -12,7 +12,7 @@
 
     position: absolute;
     z-index: 1;
-    bottom: -250px;
+    display: block;
     left: 50%;
     transform: translate(-50%);
     visibility: hidden;

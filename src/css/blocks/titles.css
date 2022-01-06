@@ -16,13 +16,9 @@
     font-weight: 700;
     font-size: 2em;
     padding: 10px;
+    margin: 0 auto;
 }
 
-/* .title-section {
-    display: inline-block;
-    margin-bottom: 50px;
-    font-size: 55px;
-} */
 .title-text {
     font-weight: 600;
     font-size: 1.2em;

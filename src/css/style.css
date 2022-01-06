@@ -2,7 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
@@ -14,20 +13,18 @@
 @import url(header/logo.css);
 @import url(header/nav.css);
 
-@import url(blocks/boxes.css);
 @import url(blocks/buttons.css);
+@import url(blocks/content.css);
 @import url(blocks/card.css);
+@import url(blocks/code.css);
 @import url(blocks/icon.css);
 @import url(blocks/img.css);
 @import url(blocks/list.css);
 @import url(blocks/popup.css);
 @import url(blocks/table.css);
-@import url(blocks/text.css);
 @import url(blocks/titles.css);
 
-@import url(modifier/border.css);
 @import url(modifier/rotate.css);
-@import url(modifier/opacity.css);
 
 @import url(html5.css);
 

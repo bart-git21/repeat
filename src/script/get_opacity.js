@@ -5,7 +5,7 @@ document.addEventListener("onDOMContentLoaded", foo());
 
 function foo() {
     setTimeout(function() {
-        document.querySelector(".box-invisible").classList.add("opacity");
-        document.querySelector(".box-invisible").classList.remove("box-invisible");
+        document.querySelector(".invisible-content").classList.add("opacity-content");
+        document.querySelector(".invisible-content").classList.remove("invisible-content");
     }, 3000);
 }

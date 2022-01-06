@@ -30,7 +30,7 @@
 /* blue button*/
 
 .button-blue {
-    margin: 10px 0;
+    margin: 0;
     background: var(--main-bg-color);
     height: 100%;
     padding: 0 10px;

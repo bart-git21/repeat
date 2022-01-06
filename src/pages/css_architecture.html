@@ -39,7 +39,7 @@
     </header>
     
     <main class="main light">
-        <div class="title-main box-inline-centered text-font-family-Indie-Flower">
+        <div class="title-main inline-content text-font-family-Indie-Flower">
             <span>CSS Architecture</span>
         </div>
     
@@ -47,58 +47,61 @@
     
             <!-- BEM -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">BEM</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">BEM</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://ru.bem.info/methodology/key-concepts/">Документация БЭМ</a>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://medium.com/@innabelaya/%D0%B1%D1%8D%D0%BC-%D0%B4%D0%BB%D1%8F-%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D1%85-%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B8-%D0%BD%D0%B5%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%B4%D0%BD%D1%8B%D0%B5-%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B8-1a21d67cf840">medium</a>
                 </div>
     
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
                             <div class="title-text">Блок</div>                    
-                            <div class="img center-border">
-                                <img class="img" src="https://ru.bem.info/kFetIbKxQdABHhUecbic45Il0Bg.png" alt="">
+                            <div class="result-view">
+                                <img src="https://ru.bem.info/kFetIbKxQdABHhUecbic45Il0Bg.png" alt="">
                             </div>
                             <div class="title-text">Элемент</div>
                             <span class="text">Элементы не имеют смысла вне блока.</span>
-                            <span class="text">Классически отделяются двумя подчеркиваниями:<span class="text-dark-background">div class = "block-name__elem"</span>. разделитель можно использовать другой.</span>
-                            <div class="img center-border">
-                                <img class="img" src="https://ru.bem.info/cPrdQL4EZZdhPIrcYOayygPBSm4.png" alt="">
+                            <span class="text">Классически отделяются двумя подчеркиваниями:
+                                <code>div class = "block-name__elem"</code>
+                                разделитель можно использовать другой.
+                            </span>
+                            <div class="result-view">
+                                <img src="https://ru.bem.info/cPrdQL4EZZdhPIrcYOayygPBSm4.png" alt="">
                             </div>
                             <div class="title-text">Модификатор</div>
                             <span class="text">Определяет внешний вид, состояние и поведение блока либо элемента.</span>
                             <span class="text">В классической схеме имя модификатора отделяется одним подчеркиванием.</span>
-                            <div class="center-border">
-                                <img class="img" src="https://ru.bem.info/WSU5nwZla7p44W2tdxiP371xx38.png" alt="">
+                            <div class="result-view">
+                                <img src="https://ru.bem.info/WSU5nwZla7p44W2tdxiP371xx38.png" alt="">
                             </div>
                             <div class="title-text">Принципы написания CSS</div>
                             <ul class="list">
                                 <li>не использовать комбинированные селекторы вида
-                                    <span class="text-dark-background">.class1.class2 { }</span>
+                                    <code>.class1.class2 { }</code>
                                 </li>
                                 <li>не использовать тег и класс в селекторе
-                                    <span class="text-dark-background">h1.class { }</span>
+                                    <code>h1.class { }</code>
                                 </li>
                                 <li>не использовать атрибуты тегов
-                                    <span class="text-dark-background">input[type=submit] { }</span>
+                                    <code>input[type=submit] { }</code>
                                 </li>
                             </ul>
                             <div class="title-text">Преимущства</div>
                             <ul class="list">
                                 <li>БЭМ избавляет от вложенности селекторов
-                                    <span class="text-dark-background">header nav button a { }</span>
+                                    <code>header nav button a { }</code>
                                 </li>
                                 <li>Можно миксовать стили универсальных блоков и дополнительных классов
-                                    <span class="text-dark-background">form class = "form search"</span>
+                                    <code>form class = "form search"</code>
                                 </li>
                                 <li>Файловая структура проекта облегчает перенос блока из проекта в проект. Чтобы вместе с версткой перенести все стили и поведение блока, достаточно скопировать папку этого блока в новый проект.
-                                <span class="center-border">
-                                    <img class="img" src="https://ru.bem.info/uXNvQ2lOOEgTRcojbeobCz4NWVg.svg" alt="">
+                                <span class="result-view">
+                                    <img src="https://ru.bem.info/uXNvQ2lOOEgTRcojbeobCz4NWVg.svg" alt="">
                                 </span>
                                 </li>
                             </ul>
@@ -109,13 +112,13 @@
     
             <!-- smacss -->
             <section class="section box-flex-column">
-                <div class="title-section box-inline-centered text-font-family-Indie-Flower">SMACSS</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">SMACSS</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="http://smacss.com/">smacss</a>
                 </div>
     
-                <div class="button popup-button box-column-centered" id="popup_open"><span>Read More...</span></div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
 
                 <div class="popup" id="popup">

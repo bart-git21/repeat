@@ -1,0 +1,142 @@
+
+
+
+/* ============ видимость =============*/
+
+.invisible-content {
+    opacity: 0;
+}
+
+.opacity-content {
+    animation: opacity 4s linear;
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*========= положение в пространстве =============*/
+
+.inline-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+}
+
+
+.box-left-side {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+
+/* ========== рамка и фон =============*/
+
+.result-view {
+    border: 2px solid var(--main-section-color);
+    background: rgba(240, 245, 250, 0.7);
+    padding: 10px;
+    width: 100%;
+    margin: 15px auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-view:hover {
+    background: var(--main-section-color);
+
+}
+.result-view:before {
+    content: "result";
+    position: absolute;
+    top: 5px;
+    right: 15px;
+
+    color: var(--dark-color);
+    font-size: .8em;
+}
+
+
+
+
+
+
+/* =========== шрифты ===============*/
+
+
+.text-small {
+    display: inline-flex;
+    font-size: .8em;
+    margin: 0 0 20px 0;
+
+    transition: .4s;
+}
+.text-small a {
+    margin-left: 20px;
+}
+.text-small a:hover {
+    scale: 1.1;
+}
+
+
+
+.text {
+    width: 100%;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+
+
+
+.text-bold {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+
+
+
+.text-font-family-bad-script {
+
+    color: var(--dark-color);
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Bad Script', cursive;
+    /* font-family: 'Comforter', cursive; */
+    /* font-family: 'Marck Script', cursive; */
+    letter-spacing: 7px;
+}
+
+.text-font-family-Indie-Flower {
+
+    color: var(--dark-color);
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 5px;
+}
