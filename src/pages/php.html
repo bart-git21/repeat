@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repeat</title>
+    <title>PHP</title>
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/fonts.css">
     
@@ -32,46 +32,57 @@
             <a href="javascript.html" class="nav__button button">
                 <span>javascript</span>
             </a>
-            <a href="php.html" class="nav__button button">
+            <a href="#.html" class="nav__button button">
                 <span>PHP</span>
             </a>
-            <a href="#" class="nav__button button">
+            <a href="git.html" class="nav__button button">
                 <span>Git</span>
             </a>
         </nav>
     </header>
     
     <main class="main light">
-        <div class="title-main inline-content text-font-family-Indie-Flower">Git</div>
+        <div class="title-main inline-content text-font-family-Indie-Flower">
+            <span>PHP</span>
+        </div>
     
         <article class="main__article">
     
-            <!-- semantic -->
+            <!-- foreach   -->
             <section class="section box-flex-column">
-                <div class="title-section inline-content text-font-family-Indie-Flower">Remove directory</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">Foreach</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://git-scm.com/docs/git-rm">
-                        <span>GIT Documentation</span>
-                    </a>
+                    <a class="text-small-link" target="_blank" rel="noopener" href="http://code.mu/ru/php/book/prime/loops/foreach-keys/">code.mu</a>
                 </div>
-    
-                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
-
-
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+                
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-text">Как удалить папку?</div>
-                            <code title="Change 'master'">$ git rm -r test_dir<br>$ git commit -m "Removed test directory"<br>$ git push origin master</code>
+                            <div class="title-section column-content text-font-family-Indie-Flower">Foreach</div>
+                            <div class="title-text">Получение ключей в цикле foreach</div>
+                            <code>$array = [1 => 'a', 2 => 'b'];</code>
+                            <code>foreach ($array as $key => $elem) {<br>echo $key.'-'.$elem . "&#60br>";<br>}</code>
+                            <span class="result-view">1-a<br>2-b</span>
+
+                            <form action="php/foreach.php" method="post">
+                                <span><span class="text-bold">Задача: </span> перечислить буквы латинского алфавита с первой до </span>
+                                <input type="number" size="27" placeholder="укажите число от 1 до 26" min="1" max="26" step="1" name="letter_number" id="">
+                                <button>показать</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
+        
     
         </article>
 
     </main>
+
+
+
 
 
 

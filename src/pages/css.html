@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repeat</title>
+    <title>CSS page</title>
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/fonts.css">
     
@@ -101,6 +101,9 @@
             <a href="javascript.html" class="nav__button button">
                 <span>javascript</span>
             </a>
+            <a href="php.html" class="nav__button button">
+                <span>PHP</span>
+            </a>
             <a href="git.html" class="nav__button button">
                 <span>Git</span>
             </a>
@@ -165,6 +168,50 @@
                     </div>
                 </div>
 
+            </section>
+    
+            <!-- color -->
+            <section class="section box-flex-column">
+                <div class="title-section column-content text-font-family-Indie-Flower">Color</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/css-colors/">html5book</a>
+                </div>
+    
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section column-content text-font-family-Indie-Flower">Color</div>
+                            <div class="title-text">форматы написания цвета "lightpink"</div>   
+                            <code>color: lightpink;</code>
+                            <code>color: #ffb6c1;</code>
+                            <code>color: hsl(351, 100%, 86%);</code>
+                            <code>color: rgb(255, 184, 194);</code>
+                            <span class="result-view">
+                                <div style="width:100px; height:100px; background:lightpink"></div>
+                            </span>
+
+                            <div class="title-text">RGBA</div>   
+                            <div class="text">значение непрозрачности:</div>
+                            <code>color: rgba(255, 184, 194, 0.5);<br>color: hsla(351, 100%, 86%, 0.5);</code>
+                            <div class="text">совершенно прозрачный:</div>
+                            <code>color: transparent;</code>
+                            <span class="result-view ">
+                                <div class="inline-content">
+                                    <div style="width:200px; height:200px; background:blue; position:absolute; left:40px;top:20px"></div>
+                                    <div style="width:200px; height:200px; background:rgba(255, 184, 194, 0.5); z-index:2;">полупрозрачный</div>
+                                </div>
+                                <div class="inline-content">
+                                    <div style="width:200px; height:200px; background:blue; position:absolute; left:40px;top:20px"></div>
+                                    <div style="width:200px; height:200px; background:transparent; border:3px solid lightpink; z-index:2;"></div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </section>
     
             <!-- column -->
@@ -253,9 +300,11 @@
                             <div class="title-text">list-style-type</div>
                             тип маркера (кружок, римские цифры, квадрат и т.д.) 
                             <ol class="result-view">
-                                <li style="list-style-position:inside;list-style-type: lower-roman;">lower-roman</li>
-                                <li style="list-style-position:inside;list-style-type: upper-roman;">upper-roman</li>
-                                <li style="list-style-position:inside;list-style-type: square;">square</li>
+                                <div class="column-content">
+                                    <li style="list-style-position:inside;list-style-type: lower-roman;">lower-roman</li>
+                                    <li style="list-style-position:inside;list-style-type: upper-roman;">upper-roman</li>
+                                    <li style="list-style-position:inside;list-style-type: square;">square</li>
+                                </div>
                             </ol>
                             <div class="title-text">list-style-image</div>
                             маркер в виде рисунка или градиента
@@ -265,8 +314,10 @@
                             <div class="title-text">list-style-position</div>
                             маркер расположен вне или внутри блока с текстом.
                             <ol class="result-view">
-                                <li style="list-style-position:inside;">inside marker position</li>
-                                <li style="list-style-position:outside;">outside marker position</li>
+                                <div class="column-content">
+                                    <li style="list-style-position:inside;">inside marker position</li>
+                                    <li style="list-style-position:outside;">outside marker position</li>
+                                </div>
                             </ol>
                         </div>
                     </div>
