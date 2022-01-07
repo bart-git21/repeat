@@ -69,8 +69,29 @@
                             <form action="php/foreach.php" method="post">
                                 <span><span class="text-bold">Задача: </span> перечислить буквы латинского алфавита с первой до </span>
                                 <input type="number" size="27" placeholder="укажите число от 1 до 26" min="1" max="26" step="1" name="letter_number" id="">
-                                <input type="submit" value="Отправить">
+                                <input disabled type="submit" value="Отправить">
                             </form>
+
+                            <code>
+                                &#60?php <br>
+                                $letter_number = htmlentities($_POST["letter_number"]); <br>
+                                $arr = [1 => "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; <br>
+                            
+                                foreach ($arr as $key => $elem) { <br>
+                                    echo $key . " - " . $elem . "&#60br>"; <br>
+                                    if ($key >= $letter_number) break; <br>
+                                }
+                                ?>
+
+                            </code>
+
+                            <div class="text">указано, например, 4. тогда результат будет следующим:</div>
+                            <div class="result-view">
+                                1 - a <br>
+                                2 - b <br>
+                                3 - c <br>
+                                4 - d
+                            </div>
                         </div>
                     </div>
                 </div>
