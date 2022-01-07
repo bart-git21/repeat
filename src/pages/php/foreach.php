@@ -52,7 +52,7 @@
         <section class="section box-flex-column">
             <div class="title-section inline-content text-font-family-Indie-Flower">Foreach</div>
             <div class="text-small">
-                <div class="text-small-header">Источники:</div>
+                <div class="text-small-header">Source:</div>
                 <a class="text-small-link" target="_blank" rel="noopener" href="http://code.mu/ru/php/book/prime/loops/foreach-keys/">code.mu</a>
             </div>
             <div class="content-section">
@@ -69,6 +69,8 @@
                     ?>
                     
                 </code>
+                <div class="button column-content" ><span>back...</span></div>
+
             </div>
         </section>
 
