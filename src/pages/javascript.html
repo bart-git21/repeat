@@ -53,7 +53,7 @@
                 <div class="title-section inline-content text-font-family-Indie-Flower">Event</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/object">learn.javascript</a>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/introduction-browser-events">learn.javascript</a>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="http://code.mu/ru/javascript/book/prime/dom/object-Event/intro/">code.mu</a>
                     <a class="text-small-link" target="_blank" rel = "noopener" href="https://itchief.ru/javascript/browser-events">itchief</a>
                 </div>
@@ -66,6 +66,25 @@
                             <div class="text">получить объект Event (например, click):</div>
                             <code>elem . addEventListener ( 'click', function (event) {<br>console.log (event) ;<br>});</code>
                             
+                            <span class="title-text">способы назначить обработчик события:</span>
+                            <div class="text-bold">в html использовать атрибут:</div>
+                            <code>button onclick="alert('text')"</code>
+                            <div class="text-bold">в js использовать свойство DOM-элемента</div>
+                            <code>button.onclick = () => {alert("text")};</code>
+                            или
+                            <code>button.onclick = foo;</code>
+                            <div class="text">Node! JavaScript перезапишет обработчик из атрибута</div>
+                            <div class="text">Node! также второй JavaScript обработчик перезапишет первый обработчик</div>
+                            <div class="text-bold">метод js</div>
+                            <code>element.addEventListener(event, handler[, options]);</code>
+                            <div class="text">options может быть once, capture или passive</div>
+                            <div class="text">Node! Метод addEventListener позволяет добавлять несколько обработчиков на одно событие одного элемента</div>
+                            
+                            <span class="title-text">удалить соответствующий обработчик:</span>
+                            <code>button.onclick = null.</code>
+                            <code>element.removeEventListener(event, handler[, options]);</code>
+                            <div class="text">Node! чтобы удалить функцию-обработчик, она должна вызываться (а не создаваться в обработчике)</div>
+
                             <span class="title-text">addEventListener ( "mousemove" , foo)</span>
                             <div class="text">координаты события "mousemove" :</div>
                             <code>function foo(event) {console.log(event.clientX);}</code>
