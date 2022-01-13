@@ -32,8 +32,12 @@
 .button-blue {
     margin: 0;
     background: var(--main-bg-color);
+    border: 2px solid var(--main-bg-color);
     height: 100%;
-    padding: 0 10px;
+    padding: 10px 20px;
+}
+.button-blue:hover {
+    background: var(--dark-color);
 }
 
 

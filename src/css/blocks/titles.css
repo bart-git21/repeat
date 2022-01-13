@@ -24,5 +24,6 @@
     font-size: 1.2em;
     border-bottom: 1px double var(--dark-color);
     margin: 10px auto;
+    padding: 10px;
 }
 

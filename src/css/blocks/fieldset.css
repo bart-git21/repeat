@@ -1,0 +1,20 @@
+
+
+
+
+
+fieldset {
+    color: var(--dark-color);
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 5px 10px;
+
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid var(--dark-color);
+    border-radius: 20px;
+}
+
+
+
