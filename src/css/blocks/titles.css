@@ -17,6 +17,9 @@
     font-size: 2em;
     padding: 10px;
     margin: 0 auto;
+
+    text-align: center;
+    line-height: 1;
 }
 
 .title-text {

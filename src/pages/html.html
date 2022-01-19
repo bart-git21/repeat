@@ -123,6 +123,41 @@
                     </div>
                 </div>
             </section>
+    
+            <!-- maps -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Maps (Google, Yandex)</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a href="#" class="text-small-link" target="_blank" rel = "noopener">#</a>
+                </div>
+    
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+
+                            <div class="title-text">Google map</div>
+                            <div class="text-bold">встраивание google карты:</div>
+                            <div class="text">кнопка "поделиться", далее вкладка "встраивание карт", далее "копировать HTML"</div>
+                            <div class="result-view">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.9385067801445!2d36.07278781600568!3d52.96752061071899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413210a08645d905%3A0x5685a0ec36c7e8a3!2z0JzQuNGA0LAg0L_Quy4sIDEsINCe0YDRkdC7LCDQntGA0LvQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMzAyMDMw!5e0!3m2!1sru!2sru!4v1642257629514!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            
+
+                            <div class="title-text">Yandex map</div>
+                            <div class="text-bold">встраивание Yandex карты:</div>
+                            <div class="text">троеточие, далее "поделиться", далее скопировать "виджет с картой"</div>
+                            <div class="result-view">
+                                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/10/orel/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Орёл</a><a href="https://yandex.ru/maps/10/orel/house/ploshchad_mira_1/Z08YdgBkTEUOQFtofXV3dnhqZQ==/?ll=36.074073%2C52.967538&utm_medium=mapframe&utm_source=maps&z=16.54" style="color:#eee;font-size:12px;position:absolute;top:14px;">Площадь Мира, 1 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUyjWXglC" width="600" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- ol -->
             <section class="section box-flex-column">
@@ -274,86 +309,6 @@
                         </div>
                     </div>
                 </div>           
-            </section>
-    
-            <!-- таблицы -->
-            <section class="section box-flex-column">
-                <div class="title-section inline-content text-font-family-Indie-Flower">Table</div>
-                <div class="text-small">
-                    <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Advanced">MDN</a>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/html-table/">html5book</a>
-                </div>
-    
-                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
-
-
-                <div class="popup" id="popup">
-                    <div class="popup__body">
-                        <div class="content-section">
-                            <div class="title-text">HTML</div>
-                            
-                            <div class="result-view">
-                                <table>
-                                    <tr>
-                                        <td>table >
-                                            <table class="table">
-                                                <caption title="для скринридеров. сразу после Table">caption</caption>
-                                                
-                                                <thead>
-                                                    <tr title="для css. thead > tr > 3 th">
-                                                        <th>thead ></th>
-                                                        <th>th</th>
-                                                        <th>th</th>
-                                                    </tr>
-                                                </thead>
-                    
-                                                <tbody title="для css. tbody > tr > td">
-                                                    <tr>
-                                                        <td rowspan="3">tbody ></td>
-                                                        <td>tr ></td>
-                                                        <td>td</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>tr ></td>
-                                                        <td rowspan="2">td rowspan=2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>tr ></td>
-                                                    </tr>
-                                                </tbody>
-                    
-                                                <tfoot title="для css. tfoot > tr > td">
-                                                    <tr >
-                                                        <td>tfoot ></td>
-                                                        <td colspan="2">td colspan=2</td>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
-
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="text" title="table>tr>td">Можно вложить таблицу в другую таблицу</div>
-
-                            <div class="title-text">CSS</div>        
-                            <div class="text-bold"></div>
-                            <ul class="list">
-                                <li>Границы. по умолчанию отсутствуют.
-                                    <code>table {border: 1px solid grey;}</code>
-                                </li>
-                                <li>Промежутки между ячейками. установлены по умолчанию.
-                                    <code>table {border-collapse: collapse;}</code>
-                                </li>
-                                <li>Ширина по умолчанию равна ширине содержимого.
-                                    <code>table {width: 100%;}</code>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
             </section>
             
         </article>

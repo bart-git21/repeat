@@ -47,7 +47,7 @@
         </div>
     
         <article class="main__article">
-    
+
             <!-- Document -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">Document</div>
@@ -63,6 +63,61 @@
                             <span class="title-text">Document . documentElement</span>
                             <div class="text">свойство. позволяет обратиться к корневому элементу документа (для HTML документа это html).</div>
                             <code>const element = document . documentElement;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Class || Style -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Class || Style</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://learn.javascript.ru/styles-and-classes">learn.javascript</a>
+                </div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section inline-content text-font-family-Indie-Flower">Class || Style</div>
+
+                            <div class="text">Классы – всегда предпочтительный вариант по сравнению со style.</div>
+                            <div class="text">Используй свойство style только, если вычисляешь свойства элемента динамически.</div>
+
+                            <span class="title-text">elem.className</span>
+                            <div class="text">соответствует атрибуту "class"</div>
+                            <code>elem.className;</code>
+
+                            <span class="title-text">elem.classList</span>
+                            <div class="text">это объект с методами для добавления/удаления одного класса.</div>
+                            <code>elem.classList.add/remove("class_name")</code>
+                            <code>elem.classList.toggle("class_name")</code>
+                            <code>elem.classList.contains("class_name")</code>
+                                                        <fieldset>
+                                <legend>Задача:</legend>
+                                <div>перечислить все классы при помощи for..of</div>
+                                <code>for (let name of elem.classList) {alert(name);}</code>
+                            </fieldset>
+
+                            <span class="title-text">elem.style</span>
+                            <div class="text">это объект, который соответствует тому, что написано в атрибуте "style"</div>
+                            <code>elem.style.borderLeftWidth</code>
+
+                            <span class="title-text">elem.style.cssText</span>
+                            <div class="text">это свойство удаляет все существующие стили</div>
+                            <code>elem.style.cssText=`color: red;<br>
+                                width: 100px;<br>
+                                text-align: center;`;
+                            </code>
+
+                            <span class="title-text">getComputedStyle</span>
+                            <div class="text">это метод, чтобы получить стиль элемента.</div>
+                            <div class="text">Node! нужно указать точное свойство. Например: paddingLeft.</div>
+                            <code>getComputedStyle(element, [pseudo])</code>
+                            <div class="text">pseudo Указывается, если нужен стиль псевдоэлемента, например ::before. </div>
+                            <code>let computedStyle = getComputedStyle(document.body);<br>
+                                alert( computedStyle.marginTop );</code>
                         </div>
                     </div>
                 </div>
