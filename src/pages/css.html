@@ -234,36 +234,83 @@
                 <div class="title-section inline-content text-font-family-Indie-Flower">column- :</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://html5book.ru/css3-columns/#column-rule-color">html5book</a>
+                    <a class="text-small-link" target="_blank" rel="noopener" href="https://html5book.ru/css3-columns/#column-rule-color">html5book</a>
+                    <a class="text-small-link" target="_blank" rel="noopener" href="https://doka.guide/css/columns/">doka.guide</a>
                 </div>
-                <div class="text">если содержимое переполняет колонку, оно выходит за ее границы и не обрезается. решение:</div>
-                <code>width: 100%;</code>
+                <div class="text">если содержимое переполняет колонку, оно выходит за ее границы и не обрезается. решение: <code>width: 100%;</code></div>
+                
                 <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
 
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-text">column-width</div>
-                            <div class="text">% не применяются</div>
-                            <code>column-width: 100px;</code>
-                            <div class="title-text">column-count</div>
-                            <code>column-count: 2;</code>
-                            <div class="title-text">column-gap</div>
-                            <div class="text">разрыв между колонками.</div>
-                            <div class="text">1 em по умолчанию.</div>
-                            <code>column-gap: normal; </code>
-                            <div class="title-text">column-rule</div>
-                            <div class="text">является сокращенной записью свойств column-rule-width column-rule-style column-rule-color. </div>
-                            <div class="title-text">column-rule-width</div>
-                            <div class="text">Не работает без свойства column-rule-style. </div>
-                            <code>column-rule-width: thin;</code>
-                            <div class="title-text">column-rule-style</div>
-                            <code>column-rule-style: dotted;</code>
-                            <div class="title-text">column-rule-color</div>
-                            <code>column-rule-color: pink;</code>
+                            <div class="title-text">columns: column-count & column-width</div>
+                            <div class="text">Node! в column-width % не применяются</div>
+                            <code>column-width: 100px; // N колонок шириной 100px или шире</code>
+                            <code>columns: auto 100px; // N колонок шириной 100px или шире</code>
+                            <code>columns: 3 400px; // 3 колонки, ширина 400px или шире; если ширины контейнера на 3 колонки не хватит - ширина каждой 400 или шире, но количество уменьшится</code>
+                            <code>column-count: 3; // 3 колонки N ширины</code>
+                            <code>columns: 3; // 3 колонки N ширины</code>
+                            <div class="text">если после расчета количества колонок и их ширины останется пустая ширина, куда не поместится еще 1 колонка, все колонки растянутся, заполнив пустоту.</div>
+                            
+                            
                             <div class="title-text">column-fill</div>
-                            <div class="text">Заполнение колонок содержимым</div>
-                            <code>column-fill: auto;</code>
+                            <div class="text">Node! должна быть задана высота контейнера</div>
+                            <code>column-fill: auto; // Если контент поместится в одну колонку, он не будет переноситься на следующую.</code>
+                            <code>column-fill: balance; // браузер будет пытаться сбалансировать контент между колонками настолько, насколько возможно.</code>
+                            <div class="result-view">
+                                <div style="height: 120px; column-count:3;column-fill: balance;">
+                                    <h2 style="column-span:all;text-align:center;">column-fill: balance</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                </div>
+                            </div>
+                            <div class="result-view">
+                                <div style="height: 120px; column-count:3;column-fill: auto;">
+                                    <h2 style="column-span:all;text-align:center;">column-fill: auto</h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="title-text">column-gap</div>
+                            <div class="text">1 em по умолчанию.</div>
+                            <code>column-gap: normal; // разрыв между колонками.</code>
+                            <div class="result-view">
+                                <div style="column-count:3;column-gap:200px">
+                                    <h2 style="column-span:all;text-align:center;">column-gap:200px. </h2>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                </div>
+                            </div>
+
+
+                            <div class="title-text">column-rule: column-rule-width & column-rule-style & column-rule-color</div>
+                            <code>column-rule-width: thin; // тонкая разделительная линия</code>
+                            <div class="text">Node! Не работает без свойства column-rule-style. </div>
+                            <code>column-rule-style: dotted; // разделительная линия в виде точек</code>
+                            <code>column-rule-color: pink; // цвет разделительной линии - красный</code>
+                            <div class="result-view">
+                                <div style="column-count:3;column-rule: 2px solid red;">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="title-text">column-span</div>
+                            <code>column-span: all; // элемент не будет разбиваться на колонки, хотя принадлежит родителю, разбитому на колонки. вместо это элемент займет всю ширину родителя.</code>
+                            <div class="result-view">
+                                <div style="width:500px;column-count:3;">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                    <h2>Very very very very long capture</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illo obcaecati cum placeat eius fuga sint ratione molestiae delectus? Iste consequuntur error perferendis necessitatibus unde porro aliquam ab quis exercitationem?</p>
+                                </div>
+                            </div>
+                            <div class="result-view">
+                                <div style="width:500px;column-count:3;">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum, quibusdam voluptate similique quas temporibus? Doloribus, ipsa? Consequatur, corporis! Ex, quod aliquid voluptates minima delectus nisi accusamus nesciunt quaerat laudantium!</p>
+                                    <h2 style="column-span:all;text-align:center;">Very very very very long capture</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores illo obcaecati cum placeat eius fuga sint ratione molestiae delectus? Iste consequuntur error perferendis necessitatibus unde porro aliquam ab quis exercitationem?</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,7 +322,7 @@
                 <div class="title-section inline-content text-font-family-Indie-Flower">filter:</div>
                 <div class="text-small">
                     <div class="text-small-header">Источники:</div>
-                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://webref.ru/css/value/hue-rotate">webref</a>
+                    <a class="text-small-link" target="_blank" rel="noopener" href="https://webref.ru/css/value/hue-rotate">webref</a>
                 </div>
     
                 <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
