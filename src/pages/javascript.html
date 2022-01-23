@@ -108,6 +108,57 @@
         </div>
     
         <article class="main__article">
+
+            <!-- Array  -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Array</div>
+                <div class="text-small">
+                    <div class="text-small-header">Источники:</div>
+                    <a class="text-small-link" target="_blank" rel = "noopener" href="https://basicweb.ru/javascript/js_array.php">basicweb.ru</a>
+                </div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section column-content text-font-family-Indie-Flower">Array</div>
+                            
+                            <span class="title-text">Добавление элемента в массив</span>
+                            <div class="text">Допустим в массиве 3 элемента. Если добавить элемент с индексом 5, то элементы с пропущенными индексами (3 и 4) получат значение undefined.</div>
+                            <code>let arr = [0,1,2];</code>
+                            <code>arr[5] = 5;</code>
+                            <div class="result-view">
+                                <div class="column-content">
+                                    <div class="text">чтобы увидеть значение элемента с индексом 3, нажмите кнопку:</div>
+                                    <button class="button button-blue" onclick="let arr = [0,1,2];arr[4] = 4;alert(arr[3]);">значение четвертого элемента (arr[3])</button>
+                                </div>
+                            </div>
+
+                            <span class="title-text">Свойства и методы массива</span>
+                            <ul class="list">
+                                <li class="text">свойства хранят сведения и массиве.</li>
+                                <li class="text">методы либо изменяют массив, либо возвращают новый.</li>
+                            </ul>
+
+                            <span class="title-text">перечень свойств массивов</span>
+                            <ul class="list">
+                                <li class="text"><code>array.length // the length</code> - returns or sets the number of elements in a given array</li>
+                                <li class="text"><code>arr[arr.length - 1] // the last number of elements in a given array</code> - returns the last number of elements in a given array</li>
+                            </ul>
+
+                            <span class="title-text">перечень методов массивов</span>
+                            <ul class="list">
+                                <li class="text"><code>array.concat( secondArray, thirdArray, ..., xArray ) // Объединение массивов</code> - копирует ссылки на объекты в новый массив</li>
+                                <li class="text"><code>array.pop( ) // the removed element</code> - Последний элемент будет удален из массива</li>
+                                <li class="text"><code>array.push( element1, element2, ..., elementX ) // the new length</code> - Один или несколько элементов будут добавлены в конец массива</li>
+                                <li class="text"><code>array.shift( ) // the removed element</code> - Первый элемент будет удален из массива</li>
+                                <li class="text"><code>array.unshift( element1, element2, ..., elementX ) // the new length</code> - Один или несколько элементов будут добавлены в начало массива</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
     
             <!-- Event  -->
             <section class="section box-flex-column">
@@ -295,7 +346,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <!-- Object  -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">Object</div>
