@@ -233,14 +233,12 @@
                                     <span class="text-bold">object</span>
                                     <div>позволяет применять скрипты. Это самый надежный метод для обеспечения интерактивности.</div>
                                     <div></div>
-                                    <code>
-                                        <div>&#60object type="image/svg+xml" data="picture.svg"></div>
-                                        <div>&#60img src="picture.png"></div>
-                                        <div>&#60/object></div>                            
-                                    </code>
+                                    <div class="code">
+                                        <code>&#60object type="image/svg+xml" data="picture.svg">&#60/object></code>                            
+                                    </div>
                                     <div>Pros! из соображений безопасности нельзя использовать картинку с другого домена</div>
                                     <div>Cons! CSS стили придется прописывать в SVG файл.</div>
-                                    <div >Запуск SVG анимации.
+                                    <div>Запуск SVG анимации.
                                         <span class="button-checkbox button">
                                             <input type="checkbox" name="object_svg" id="object_svg" >
                                             <label for="object_svg"></label>
@@ -250,6 +248,7 @@
                                         <object id="wheel" data="../media/wheel.svg" type="image/svg+xml"></object>
                                     </div>
                                 </li>
+
                                 <li>
                                     <span class="text-bold">img</span>
                                     <div>используется когда нет необходимости добавлять интерактивность.</div>
@@ -257,14 +256,15 @@
                                     <div>Pros! "srcset": older browsers will load the PNG instead SVG.</div>
                                     <div>Cons! SVG can't be manipulated with JavaScript.</div>
                                 </li>
+
                                 <li>
                                     <span class="text-bold">css background image.</span>
                                     <div>используется когда нет необходимости добавлять интерактивность.</div>
-                                    <code>
-                                        {background: url("fallback.png") no-repeat center;<br>
-                                        background-image: url("image.svg");<br>
-                                        background-size: contain;}
-                                    </code>
+                                    <div class="code">
+                                        <code>{background: url("fallback.png") no-repeat center;<br></code> 
+                                        <code>background-image: url("image.svg");<br></code> 
+                                        <code>background-size: contain;}</code>
+                                    </div>
                                     <div>Pros! use fallback - older browsers will stick with the PNG that they understand, while newer browsers will load the SVG.</div>
                                     <div>Cons! SVG can't be manipulated with JavaScript.</div>
                                 </li>

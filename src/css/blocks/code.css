@@ -1,18 +1,15 @@
 
 
 
-
-
 code {
+    display: inline-block;
+    width: 100%;
+
     background: var(--dark-color);
     color: #fff;
-    font-size: 1.2em;
-    padding: 5px 10px;
+    font-size: 1em;
 
-    display: inline;
-    width: 100%;
     margin: 5px 0;
+    padding: 5px;
 }
-
-
 
