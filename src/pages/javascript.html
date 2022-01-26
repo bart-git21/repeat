@@ -72,36 +72,8 @@
 </head>
 <body>
 
-    <header class="header light">
-        <a href="../../index.html" class="logo">My Mind Palace</a>
-        <nav class="nav">
-            <a href="html.html" class="nav__button button">
-                <span>HTML</span>
-            </a>
-            <a href="html5.html" class="nav__button button">
-                <span>HTML 5</span>
-            </a>
-            <a href="css.html" class="nav__button button">
-                <span>CSS</span>
-            </a>
-            <a href="css_architecture.html" class="nav__button button">
-                <span>CSS Architecture</span>
-            </a>
-            <a href="dom.html" class="nav__button button">
-                <span>DOM</span>
-            </a>
-            <a href="#" class="nav__button button">
-                <span>javascript</span>
-            </a>
-            <a href="php.html" class="nav__button button">
-                <span>PHP</span>
-            </a>
-            <a href="git.html" class="nav__button button">
-                <span>Git</span>
-            </a>
-        </nav>
-    </header>
-    
+    <header></header>
+
     <main class="main light">
         <div class="title-main inline-content text-font-family-Indie-Flower">
             <span>JavaScript</span>
@@ -127,8 +99,18 @@
                             <code>XMLHttpRequest.send();</code>
 
                             <div class="title-text">обработка ответа сервера:</div>
-                            <code>XMLHttpRequest.open("get", "yourFile.txt", true);</code>
-                            <code>XMLHttpRequest.send();</code>
+                            <code>XMLHttpRequest.onreadystatechange</code>
+                            <code>XMLHttpRequest.responseText</code>
+                            
+                            <div class="title-text">получить содержимое header</div>
+                            <div class="text">index.html файл</div>
+                            <code>&#60header>&#60/header></code>
+                            <code>Content</code>
+                            <code>&#60footer>&#60/footer></code>
+                            <div class="text">js-файл</div>
+                            <code>fetch("./header.html")</code>
+                            <code>.then(response => {return response.text()})</code>
+                            <code>.then(data => {document.querySelector("header").innerHTML = data;})</code>
                         </div>
                     </div>
                 </div>
@@ -525,6 +507,7 @@
 
 
 
+    <script src="../script/import.js"></script>
     <script src="../script/popup.js"></script>
     <script src="../script/js_events.js"></script>
     
