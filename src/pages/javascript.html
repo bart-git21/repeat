@@ -407,8 +407,7 @@
             <!-- RegExp  -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">RegExp</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://learn.javascript.ru/regexp-introduction">learn.javascript</a>
                 </div>
                 <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
@@ -418,17 +417,38 @@
                         <div class="content-section">
                             <div class="title-section column-content text-font-family-Indie-Flower">RegExp</div>
                             <span class="title-text">создать регулярное выражение :</span>
-                            <code>reg = new RegExp("template", "g");</code>
-                            <code>regexp = /t/g;</code>
+                            <code>let reg = new RegExp("template", "g"); // через конструктор</code>
+                            <code>let regexp = /template/g; // через слэш</code>
                             
                             <span class="title-text">флаги :</span>
                             <code>i g m s u y</code>
 
                             <span class="title-text">str.match()</span>
-                            <code>let result = str.match(template/g);</code>
+                            <code>let result = str.match(template/g); // поиск "template" в "str"</code>
                             <div class="text">При отсутствии совпадений возвращается не пустой массив, а именно null. </div>
                             <div class="text">чтобы результатом всегда был массив :</div>
                             <code>let result = str.match(/template/g) || [ ];</code>
+
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>найти в тексте число ХХХ (цыфры не известны)</div>
+                                <code>"a number is 123".match(/\d\d\d/); // Array [ "123" ]</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>найти в тексте первые три символа, не являющихся цыфрами (символы не известны)</div>
+                                <code>"a number is 123".match(/\D\D\D/); // Array [ "a n" ]</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>найти в тексте "символ символ пробел"</div>
+                                <code>"a number is 123".match(/\D\D\s/); // Array [ "er " ]</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>найти в тексте "пробел символ НЕпробел"</div>
+                                <code>"a number is 123".match(/\s\D\S/); // Array [ " nu" ]</code>
+                            </fieldset>
 
                             <span class="title-text">str.replace()</span>
                             <code>let result = str.replace(template, replacement);</code>
