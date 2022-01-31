@@ -75,6 +75,43 @@
 
 
 
+
+          
+.mix-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    background: #888;
+  }
+
+.mix-container img {
+    max-width: 100%;
+    mix-blend-mode: luminosity; 
+}
+
+.mix-container .mix-layer {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 80px;
+    background-color: #00cbff;
+}
+.mix-container h1, h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: -.1em;
+}
+.mix-container h1 {
+    color: #00cbff;
+}
+.mix-container h2 {
+    margin-top: -1em;
+    color: rgb(192, 16, 16);
+}
+
     </style>
     
 </head>
@@ -419,8 +456,7 @@
             <!-- mix-blend-mode -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">mix-blend-mode:</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://hcdev.ru/css/mix-blend-mode/">hcdev.ru</a>
                     <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/CSS/mix-blend-mode">MDN</a>
                 </div>
@@ -429,10 +465,84 @@
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-section inline-content text-font-family-Indie-Flower">mix-blend-mode</div>
+                            <div class="title-section inline-content text-font-family-Indie-Flower">mix-blend-mode:</div>
                             <div class="text">CSS-свойство mix-blend-mode определяет режим смешивания цветов выбранного элемента с низлежащими слоями</div>
-                            <div class="text"><span class="text-bold">multiply</span> - умножение верхнего и нижнего цветов</div>
-                            
+
+
+                            <div class="result-view">
+                                <div class="mix-container">
+                                    <img src="https://images.pexels.com/photos/827516/pexels-photo-827516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                                    <div class="mix-layer"></div>
+                                    <h1>destination</h1>
+                                    <h2 class="mix-layer-2">mix layer</h2>
+                                </div>                                
+                            </div>
+
+                            Выберите режим смешивания:
+                            <div>
+                                <input checked type="radio" name="radio">
+                                <label class="text-bold">normal</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">multiply</label>- умножение верхнего и нижнего цветов
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">screen</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">overlay</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">darken</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">lighten</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">color-dodge</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">color-burn</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">hard-light</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">soft-light</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">difference</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">exclusion</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">hue</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">saturation</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">color</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio">
+                                <label class="text-bold">luminosity</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -508,6 +618,17 @@
 
     <script src="../script/import.js"></script>
     <script src="../script/popup.js"></script>
+
+    <script>
+        radio_list = document.querySelectorAll("input[type='radio']");
+        for(let i = 0; i<radio_list.length; i++) {
+            radio_list[i].addEventListener("change", function() {
+                let checked_mix_blend_mode = radio_list[i].nextElementSibling.textContent;
+                document.querySelector(".mix-layer").style.mixBlendMode = checked_mix_blend_mode;
+                document.querySelector(".mix-layer-2").style.mixBlendMode = checked_mix_blend_mode;
+            });
+        }
+    </script>
     
 </body>
 </html>
