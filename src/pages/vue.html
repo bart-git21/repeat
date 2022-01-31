@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/fonts.css">
+    
+    
+</head>
+<body>
+
+    <header></header>
+    
+    <main class="main light">
+        <div class="title-main inline-content text-font-family-Indie-Flower">Vue</div>
+    
+        <article class="main__article">
+    
+            <!-- data -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">data</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://metanit.com/web/vuejs/1.2.php">metanit.com</a>
+                </div>
+                
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+                
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section inline-content text-font-family-Indie-Flower">data</div>
+
+                            <div class="text">data хранит состояния объекта Vue</div>
+                            <div class="title-text">создать свойство в опции data</div>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>варианты создания свойства в опции data</div>
+                                <code>
+                                    <ol class="list">
+                                        <li>data: {name:"bob"}</li>
+                                        <li>let user={name:"bob"}; new Vue({data:user})</li>
+                                    </ol>
+                                </code>
+                                <span class="result-view"></span>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- methods -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">methods</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://metanit.com/web/vuejs/1.2.php">metanit.com</a>
+                </div>
+                
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+                
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section inline-content text-font-family-Indie-Flower">methods</div>
+
+                            <div class="text">methods определяет поведение объекта Vue</div>
+                            <code>methods: {...}</code>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>вернуть текст</div>
+                                <code>sayMessage: function() {return "text";}</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>вернуть свойство объекта Vue</div>
+                                <code>sayName: function() {return this.name}</code>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </article>
+
+    </main>
+
+
+
+
+    <script src="../script/import.js"></script>
+    <script src="../script/popup.js"></script>
+    
+</body>
+</html>

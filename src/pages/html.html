@@ -7,6 +7,110 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
     
+
+    <style>
+        
+/*======  semantic ==========*/
+
+.semantic-header {
+    background: #716F81;
+    width: 350px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.semantic-header .content {
+    background: #B97A95;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 90%;
+    text-align: center;
+}
+
+.semantic-header .content2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.semantic-main {
+    background: #716F81;
+    width: 350px;
+    margin: 0 0 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.semantic-main .semantic-main-content {
+    background: #B97A95;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+}
+.semantic-main .semantic-main-content .semantic-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-right: 1px solid #000;
+}
+.semantic-main .semantic-main-content .semantic-article .semantic-section {
+    background: #F6AE99;
+    width: 90%;
+    text-align: center;
+    margin: 0;
+
+}
+
+
+/*====== AUDIO ==========*/
+
+
+/* обложка */
+
+.cover {
+    position: relative;
+    height: 90px;
+    width: 90px;
+    margin: 10px;
+    background: rgba(255,255,255,.8);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+    transition: .5s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover:hover {
+    cursor: pointer;
+}
+.cover svg {
+    position: absolute;
+    font-size: 55px;
+}
+.cover svg:first-child {
+    display: none;
+    color: red;
+}
+.cover svg:last-child {
+    display: block;
+    color: green;
+}
+
+
+    </style>
     
 </head>
 <body>
@@ -18,11 +122,59 @@
 
         <article class="main__article">
     
+            <!-- аудио  -->
+            <section class="section">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Audio</div>
+                <div class="text-small">
+                    Источники:
+                    <a target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">html5book</a>
+                </div>
+    
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                        
+                            <div class="text">Чтобы запустить плеер, кликните по картинке:</div>
+                            <div class="result-view">
+                                <div class="cover ">
+                                    <svg class="audio-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4v-1.73L19.73 21L21 19.73L4.27 3zM14 7h4V3h-6v5.18l2 2z" fill="currentColor"/></svg>
+                                    <svg class="audio-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6z" fill="currentColor"/></svg>
+                                </div>
+                            </div>
+        
+                            <div class="title-text">Атрибуты тега audio:</div>
+                            <ul class="list">
+                                <li>controls
+                                    <span class="button-checkbox button">
+                                        <input  type="checkbox" name="viewAudio" id="viewAudio" >
+                                        <label for="viewAudio"></label>
+                                    </span>
+                                    <div class="sound result-view">
+                                        <audio class="sound-audio" controls title="можно audio src, можно audio > source src">
+                                            <source src="../media/European bee eater.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li>
+                                <li>loop
+                                    <span class="button-checkbox button">
+                                        <input type="checkbox" name="loopAudio" id="loopAudio" >
+                                        <label for="loopAudio"></label>
+                                    </span>
+                                </li>
+                            </ul>
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
             <!-- html -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">HTML</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://html5book.ru/element-dokument/">html5book</a>
                 </div>
     
@@ -42,8 +194,7 @@
             <!-- icon -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">Icon</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://html5book.ru/specsimvoly-html/">html5book</a>
                     <a target="_blank" rel = "noopener" href="https://unicode-table.com/ru/html-entities/">unicode-table</a>
                 </div>
@@ -99,8 +250,7 @@
             <!-- maps -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">Maps (Google, Yandex)</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a href="#" target="_blank" rel = "noopener">#</a>
                 </div>
     
@@ -134,8 +284,7 @@
             <!-- ol -->
             <section class="section box-flex-column">
                 <div class="title-section column-content text-font-family-Indie-Flower">ol</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://html5book.ru/gruppirovka-soderzhimogo/">html5book</a>
                 </div>
     
@@ -184,11 +333,61 @@
                 </div>
             </section>
     
+            <!-- semantic -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Semantic</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://html5book.ru/html-tags/">html5book</a>
+                    <a target="_blank" rel = "noopener" href="https://www.semrush.com/blog/semantic-html5-guide//">semrush</a>
+                    <a target="_blank" rel = "noopener" href="https://myrusakov.ru/using-html5-sectioning-elements.html">myrusakov</a>
+                </div>
+    
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+
+
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-text">Теги HTML5 для разметки.</div>
+                    
+                            <div class="result-view">
+                                <div>
+                                    <div class="semantic-header">
+                                        <span title="начало контента">header</span>
+                                        <div class="content">
+                                            <div class="semantic-logo">logo</div>
+                                            <div class="semantic-nav" title="группа ссылок">navigation menu</div>
+                                        </div>
+                                    </div>
+                                    <div class="semantic-main">
+                                        <span title="уникальный контент (не logo, не footer)">main</span>
+                                        <div class="semantic-main-content">
+                                            <div class="semantic-article" title="статьи, посты; могут быть вложены в другие article">article
+                                                <div class="semantic-section" title="раздел article">section 1</div>
+                                                <div class="semantic-section" title="раздел article">section 2</div>
+                                                <div class="semantic-section" title="раздел article">section 3</div>
+                                            </div>
+                                            <div class="semantic-aside" title="ДОПОЛНИТЕЛЬНЫЙ контент, связанный с article, но который нужно отделить">aside</div>
+                                        </div>
+                                    </div>
+                                    <div class="semantic-header">
+                                        <span>footer</span>
+                                        <div class="content content2">
+                                            <div class="semantic-nav">navigation menu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
             <!-- SVG -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">SVG</div>
-                <div class="text-small">
-                    Источники:
+                <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">MDN</a>
                 </div>
 
