@@ -463,9 +463,23 @@
                                     <div>Cons! этот метод не позволяет поддерживать кэширование.</div>
                                 </li>
                             </ul>
+
             
-                            <div class="title-text inline-content">linearGradient</div>                <div class="text-small">
-                                Источники:
+                            <div class="title-text inline-content">filter</div>
+                            <div class="text-small">Источники:
+                                <a target="_blank" rel = "noopener" href="https://yoksel.github.io/svg-filters/#/">yoksel.github.io</a>
+                            </div>
+                            <div class="text">в теге svg прописать:</div>
+                            <code>&#60 filter id="fire"></code>
+                            <code>&#60 feTurbulence ...>&#60 /feTurbulence></code>
+                            <code>&#60 feDisplacementMap ...>&#60 /feDisplacementMap></code>
+                            <code>&#60 /filter></code>
+                            <div class="text">в css применить фильтр к нужному элементу</div>
+                            <code>.text {filter: url(#fire);}</code>
+
+            
+                            <div class="title-text inline-content">linearGradient</div>                
+                            <div class="text-small">Источники:
                                 <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">MDN</a>
                             </div>
                             <div class="text">в файле svg прописать:</div>
@@ -475,7 +489,7 @@
                             <code>&#60path ... fill="url('#myGradient')" /></code>
                             <div class="result-view">
                                 <object data="../media/wheel_gradient.svg" type="image/svg+xml"></object>  
-                            </div>  
+                            </div>
         
                         </div>
                     </div>
