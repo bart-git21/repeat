@@ -140,26 +140,100 @@
                                     <button class="button button-blue" onclick="let arr = [0,1,2];arr[4] = 4;alert(arr[3]);">значение четвертой ячейки (arr[3])</button>
                                 </div>
                             </div>
+                            изменение одного из элементов массива:
+                            <code>arr[2] = "new value"<br>console.log(arr); // Array (6) [0,1,"new value",5]</code>
 
-                            <span class="title-text">Свойства и методы массива</span>
+                            
+                            <span class="title-text">Свойства массивов</span>
+                            <span class="text">свойства хранят сведения о массиве.</span>
                             <ul class="list">
-                                <li class="text">свойства хранят сведения о массиве.</li>
-                                <li class="text">методы либо изменяют массив, либо возвращают новый.</li>
+                                <li>
+                                    <span class="text-bold">length</span>
+                                    - returns or sets the number of elements in a given array
+                                    <code>[0,1,2].length // 3</code>
+                                    - returns the last number of elements in a given array
+                                    <code>arr[arr.length - 1] // the last number of elements in a given array</code>
+                                </li>
                             </ul>
+                            
 
-                            <span class="title-text">перечень свойств массивов</span>
-                            <code>array.length // the length</code> - returns or sets the number of elements in a given array
-                            <code>arr[arr.length - 1] // the last number of elements in a given array</code> - returns the last number of elements in a given array
-
-                            <span class="title-text">перечень методов массивов</span>
-                                <code>array.concat( secondArray, thirdArray, ..., xArray ) // возвращает НОВЫЙ массив. не меняет исходные массивы.</code> - копирует ссылки на объекты в новый массив
-                                <code>array.indexOf(searchElement[, fromIndex = 0])</code> - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
-                                <code>[0,1,2].join() // 0,1,2<br>[0,1,2].join("") // 012<br>[0,1,2].join("-") // 0-1-2</code> - объединяет все элементы массива (или массивоподобного объекта) в строку.
-                                <code>array.pop( ) // the removed last element</code> - Последний элемент будет удален из массива
-                                <code>array.push( element1, element2, ..., elementX ) // the new length</code> - Один или несколько элементов будут добавлены в конец массива
-                                <code>array.shift( ) // the removed first element</code> - Первый элемент будет удален из массива
-                                <code>array.unshift( element1, element2, ..., elementX ) // the new length</code> - Один или несколько элементов будут добавлены в начало массива
-
+                            <span class="title-text">Методы массивов</span>
+                            <span class="text">методы либо изменяют массив, либо возвращают новый.</span>
+                            <ul class="list">
+                                <li>
+                                    <span class="text-bold">concat</span>
+                                    - копирует ссылки на объекты в новый массив. возвращает НОВЫЙ массив. не меняет исходные массивы.
+                                    <code>array.concat( secondArray, thirdArray, ..., xArray )</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">forEach</span>
+                                    - calls a function for each element in an array. method is not executed for empty elements.
+                                    <code>array.forEach(testfunc(currentValue, index, arr), thisValue)</code>
+                                    <code>[0,1,2].forEach(item => {console.log(item+1)}) // 1 2 3</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">indexOf</span>
+                                    - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.
+                                    <code>array.indexOf(searchElement[, fromIndex = 0])</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">join</span>
+                                    - объединяет все элементы массива (или массивоподобного объекта) в строку.
+                                    <code>[0,1,2].join() // 0,1,2<br>[0,1,2].join("") // 012<br>[0,1,2].join("-") // 0-1-2</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">map</span>
+                                    - creates a new array from calling a function for every array element. does not execute the function for empty elements. does not change the original array.
+                                    <code>array.map(testfunc(currentValue, index, arr), thisValue)</code>
+                                    <code>[0,1,2].map(e=>{return e+2}) // [2,3,4]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">pop</span>
+                                    - Последний элемент будет удален из массива
+                                    <code>array.pop( ) // the removed last element</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">push</span>
+                                    - Один или несколько элементов будут добавлены в конец массива
+                                    <code>array.push( element1, element2, ..., elementX ) // the new length</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">reverse</span>
+                                    - Return the reversed array. overwrites the original array.
+                                    <code>[0,1,2].reverse() // [2,1,0]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">shift</span>
+                                    - Первый элемент будет удален из массива
+                                    <code>array.shift( ) // the removed first element</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">slice</span>
+                                    - Return a new array containing the extracted elements. does not change the original array.
+                                    <code>arr.slice([begin[, end]])</code>
+                                    <code>[0,1,2].slice(1,2) // [1]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">splice</span>
+                                    - Return a new array containing the deleted elements. overwrites the original array.
+                                    <code>array.splice(start[, deleteCount[, item1[, item2[, ...]]]])</code>
+                                    <code>[0,1,2].splice(2,1) // [2]]</code>
+                                    <code>arr.splice(1,0,"new element"); // arr = [0, "new element", 1]</code>
+                                    <code>[0,1,2,3,4].splice(-2,1) // [3]</code>
+                                    <code>[0,1,2,3,4].splice(2) // [2,3,4]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">sort</span>
+                                    - Return the sorted array. converting the elements into strings
+                                    <code>[0,33,1,4,2].sort() // [0,1,2,33,4]</code>
+                                    <code>[33,4,2].sort((a,b)=>{return a-b}) // [2,4,33]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">unshift</span>
+                                    - Один или несколько элементов будут добавлены в начало массива
+                                    <code>array.unshift( element1, element2, ..., elementX ) // the new length</code>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -375,8 +449,27 @@
                             <fieldset>
                                 <legend>Задача:</legend>
                                 <div>удалить у объекта свойство "name"</div>
-                                <code>let user = {name: "bob"};</code>
+                                <code>const user = {name: "bob"}</code>
                                 <code>delete user.name;</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>обратиться к свойству объекта, используя переменную как ключ</div>
+                                <code>const user = {name: "bob"}</code>
+                                <code>const userName = "name";</code>
+                                <code>console.log(user[userName]); // bob</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>получить ключи объекта</div>
+                                <code>const user = {name: "bob",color: "green"}</code>
+                                <code>for (let key in user) {console.log(key)} // name color</code>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>получить значения объекта</div>
+                                <code>const user = {name: "bob",color: "green"}</code>
+                                <code>for (let key in user) {console.log(user[key])} // bob green</code>
                             </fieldset>
                             
                             <span class="title-text">встроенные объекты</span>
@@ -512,12 +605,37 @@
                             <span class="title-text">Методы строк</span>
 
                             <ul class="list">
-                                <li><code>"string".slice(start 1, end 2) // t</code>
-                                     -  method returns the extracted part in a new string. end - позиция символа СЛЕДУЮЩЕГО после среза</li></li>
-                                <li><code>"string".toUpperCase() // STRING</code>
-                                     -  method converts a string to uppercase letters.</li>
-                                <li><code>"STRING".toLowerCase() // string</code>
-                                     -  method converts a string to lowercase letters.</li>
+                                <li><span class="text-bold">charAt</span>
+                                    -  method returns the character at a specified index (position) in a string.
+                                    <code>"string".charAt(index 2) // r</code>
+                                </li>
+                                <li><span class="text-bold">substring</span>
+                                    -  method returns the extracted part in a new string. end - позиция символа СЛЕДУЮЩЕГО после среза 
+                                    <code>"string".substring(start 1, end 4) // tri</code>
+                                </li>
+                                <li><span class="text-bold">substr</span>
+                                    -  method extracts a part of a string.
+                                    <code>"string".substr(1, 4) // trin</code>
+                                </li>
+                                <li><span class="text-bold">slice</span>
+                                    -  см. метод substring. slice понимает минус.
+                                    <code>"string".slice(start 1, end 4) // tri</code>
+                                    <code>"string".slice(-2) // ng</code>
+                                </li>
+                                <li><span class="text-bold">split</span>
+                                    -  method splits a string into an array of substrings. method does not change the original string.
+                                    <code>str.split([separator[, limit]])</code>
+                                    <code>"string".split() // ["s", "t", "r", "i", "n", "g"]</code>
+                                    <code>"new string".split(" ") // ["new", "string"]</code>
+                                </li>
+                                <li><span class="text-bold">toLowerCase</span>
+                                    -  method converts a string to lowercase letters.
+                                    <code>"STRING".toLowerCase() // string</code>
+                                </li>
+                                <li><span class="text-bold">toUpperCase</span>
+                                    -  method converts a string to uppercase letters.
+                                    <code>"string".toUpperCase() // STRING</code>
+                                </li>
                             </ul>
                             
                         </div>
