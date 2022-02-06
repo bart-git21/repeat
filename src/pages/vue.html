@@ -40,11 +40,10 @@
                                 <div>варианты создания свойства в опции data</div>
                                 <code>
                                     <ol class="list">
-                                        <li>data: {name:"bob"}</li>
+                                        <li>new Vue ({ data: {name:"bob"} })</li>
                                         <li>let user={name:"bob"}; new Vue({data:user})</li>
                                     </ol>
                                 </code>
-                                <span class="result-view"></span>
                             </fieldset>
                         </div>
                     </div>
@@ -83,6 +82,45 @@
                 </div>
             </section>
     
+            <!-- {{ mustache }} -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">mustache</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://v3.ru.vuejs.org/ru/guide/introduction.html">Документация Vue3</a>
+                </div>
+                
+                <div class="button popup-button column-content" id="popup_open"><span>Read More...</span></div>
+                
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section inline-content text-font-family-Indie-Flower">mustache</div>
+
+                            <div class="title-text">{{ mustache syntax }}</div>
+                            <fieldset>
+                                <legend>Задача:</legend>
+                                <div>передать текст</div>
+                                <ol class="list">
+                                    <li>html code:
+                                        <code>&#60span> {{ spanText }} &#60/span></code>
+                                    </li>
+                                    <li>js code:
+                                        <code>data() {return {spanText:"Lorem ipsum dolor"}}</code>
+                                    </li>
+                                </ol>
+                                <div class="result-view">
+                                    <div id="app">
+                                        <button v-on:click="spanNewText" v-if="!seen">нажмите, чтобы увидеть текст</button>
+                                        <span v-if="seen">{{ spanText }}</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
         </article>
 
     </main>
@@ -92,6 +130,8 @@
 
     <script src="../script/import.js"></script>
     <script src="../script/popup.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.29/vue.global.prod.min.js" type="text/javascript"></script>
+    <script src="../script/vue.js"></script>
+
 </body>
 </html>
