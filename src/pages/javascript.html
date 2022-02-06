@@ -166,10 +166,43 @@
                                     <code>array.concat( secondArray, thirdArray, ..., xArray )</code>
                                 </li>
                                 <li>
+                                    <span class="text-bold">copyWithin</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">entries</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">every</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">fill</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">filter</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">find</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">findIndex</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">flat</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">flatMap</span>
+                                </li>
+                                <li>
                                     <span class="text-bold">forEach</span>
                                     - calls a function for each element in an array. method is not executed for empty elements.
                                     <code>array.forEach(testfunc(currentValue, index, arr), thisValue)</code>
                                     <code>[0,1,2].forEach(item => {console.log(item+1)}) // 1 2 3</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">from</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">includes</span>
                                 </li>
                                 <li>
                                     <span class="text-bold">indexOf</span>
@@ -177,15 +210,30 @@
                                     <code>array.indexOf(searchElement[, fromIndex = 0])</code>
                                 </li>
                                 <li>
+                                    <span class="text-bold">isArray</span>
+                                </li>
+                                <li>
                                     <span class="text-bold">join</span>
                                     - объединяет все элементы массива (или массивоподобного объекта) в строку.
                                     <code>[0,1,2].join() // 0,1,2<br>[0,1,2].join("") // 012<br>[0,1,2].join("-") // 0-1-2</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">keys</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">lastIndexOf</span>
+                                    - returns the last index (position) of a specified value. -1 if the value is not found.
+                                    <code>array.lastIndexOf(item, start)</code>
+                                    <code>[0,111,2,111].lastIndexOf(111) // 3</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">map</span>
                                     - creates a new array from calling a function for every array element. does not execute the function for empty elements. does not change the original array.
                                     <code>array.map(testfunc(currentValue, index, arr), thisValue)</code>
                                     <code>[0,1,2].map(e=>{return e+2}) // [2,3,4]</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">of</span>
                                 </li>
                                 <li>
                                     <span class="text-bold">pop</span>
@@ -196,6 +244,12 @@
                                     <span class="text-bold">push</span>
                                     - Один или несколько элементов будут добавлены в конец массива
                                     <code>array.push( element1, element2, ..., elementX ) // the new length</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">reduce</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">reduceRight</span>
                                 </li>
                                 <li>
                                     <span class="text-bold">reverse</span>
@@ -214,6 +268,15 @@
                                     <code>[0,1,2].slice(1,2) // [1]</code>
                                 </li>
                                 <li>
+                                    <span class="text-bold">some</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">sort</span>
+                                    - Return the sorted array. converting the elements into strings
+                                    <code>[0,33,1,4,2].sort() // [0,1,2,33,4]</code>
+                                    <code>[33,4,2].sort((a,b)=>{return a-b}) // [2,4,33]</code>
+                                </li>
+                                <li>
                                     <span class="text-bold">splice</span>
                                     - Return a new array containing the deleted elements. overwrites the original array.
                                     <code>array.splice(start[, deleteCount[, item1[, item2[, ...]]]])</code>
@@ -223,15 +286,18 @@
                                     <code>[0,1,2,3,4].splice(2) // [2,3,4]</code>
                                 </li>
                                 <li>
-                                    <span class="text-bold">sort</span>
-                                    - Return the sorted array. converting the elements into strings
-                                    <code>[0,33,1,4,2].sort() // [0,1,2,33,4]</code>
-                                    <code>[33,4,2].sort((a,b)=>{return a-b}) // [2,4,33]</code>
+                                    <span class="text-bold">toLocaleString</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">toString</span>
                                 </li>
                                 <li>
                                     <span class="text-bold">unshift</span>
                                     - Один или несколько элементов будут добавлены в начало массива
                                     <code>array.unshift( element1, element2, ..., elementX ) // the new length</code>
+                                </li>
+                                <li>
+                                    <span class="text-bold">values</span>
                                 </li>
                             </ul>
                         </div>
