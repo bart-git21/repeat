@@ -179,9 +179,14 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">filter</span>
+                                    - creates a new array filled with elements that pass a test provided by a function. does not change the original array.
+                                    <code>array.filter(function(currentValue, index, arr), thisValue)</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">find</span>
+                                    - returns the value of the first element that passes a test.
+                                    <code>array.find(function(currentValue, index, arr),thisValue)</code>
+                                    <code>[5, 12, 8, 130, 44].find(e=>e>10) // 12</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">findIndex</span>
@@ -200,6 +205,10 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">from</span>
+                                    - returns an array from any iterable object. use it as Array.from(). 
+                                    <code>Array.from(object, mapFunction, thisValue)</code>
+                                    <code></code>
+                                    <code>[1,2,3].from() // undefined</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">includes</span>
@@ -234,6 +243,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">of</span>
+                                    - A new Array that contains the values that you pass to it.
+                                    <code>Array.of(element0[, element1[, ...[, elementN]]]) // method creates an array of one number.</code>
+                                    <code>Array(3) vs Array.of(3) // [undefined, undefined, undefined] vs [3]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">pop</span>
@@ -247,9 +259,15 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">reduce</span>
+                                    - returns a single value: the function's accumulated result. does not change the original array.
+                                    <code>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">reduceRight</span>
+                                    - returns a single value: the function's accumulated result.
+                                    <code>array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue)</code>
+                                    <code>[1,2,3,4].reduce((p,c)=>{return p-c}) // -8</code>
+                                    <code>[1,2,3,4].reduce((p,c)=>{return p-c}, 0) // -10</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">reverse</span>
@@ -269,6 +287,8 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">some</span>
+                                    - Return true if any of the aray elements pass the test, otherwise false. does not change the original array.
+                                    <code>array.some(function(value, index, arr), this)</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">sort</span>
