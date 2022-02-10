@@ -170,6 +170,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">entries</span>
+                                    - returns a new Array Iterator object that contains the key/value pairs for each index in the array. does not change the original array.
+                                    <code>array.entries()</code>
+                                    <code>['a', 'b', 'c'].entries().next().value // [0, 'a']</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">every</span>
@@ -190,6 +193,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">findIndex</span>
+                                    - returns the index (position) of the first element that passes a test OR -1. does not change the original array.
+                                    <code>array.findIndex(function(currentValue, index, arr), thisValue)</code>
+                                    <code>[5, 12, 8, 130, 44].findIndex(e=>e>13) // 3</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">flat</span>
@@ -207,8 +213,10 @@
                                     <span class="text-bold">from</span>
                                     - returns an array from any iterable object. use it as Array.from(). 
                                     <code>Array.from(object, mapFunction, thisValue)</code>
-                                    <code></code>
-                                    <code>[1,2,3].from() // undefined</code>
+                                    <code>[1,2,3].from() // undefined. use it as Array.from()</code>
+                                    <code>Array.from([1, 2, 3]) // [1,2,3]</code>
+                                    <code>Array.from([1, 2, 3], e=>e+1) // [2,3,4]</code>
+                                    <code>Array.from("text") // [ "t", "e", "x", "t" ]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">includes</span>
@@ -565,6 +573,31 @@
                 </div>
             </section>
 
+            <!-- Operators  -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Operators</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators">MDN</a>
+                </div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section column-content text-font-family-Indie-Flower">Operators</div>
+
+
+                            <ul class="list">
+                                <li><span class="text-bold">Conditional (ternary) operator</span>
+                                    <code>el>0 ? "positive"<br>: el &#60 0 ? "negative"<br>: "0";</code>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Primitives  -->
             <section class="section box-flex-column">
                 <div class="title-section inline-content text-font-family-Indie-Flower">Primitives </div>
@@ -695,6 +728,52 @@
                                     -  method returns the character at a specified index (position) in a string.
                                     <code>"string".charAt(index 2) // r</code>
                                 </li>
+                                <li><span class="text-bold">charCodeAt</span>
+                                </li>
+                                <li><span class="text-bold">codePointAt</span>
+                                </li>
+                                <li><span class="text-bold">concat</span>
+                                </li>
+                                <li><span class="text-bold">endsWith</span>
+                                </li>
+                                <li><span class="text-bold">fromCharCode</span>
+                                </li>
+                                <li><span class="text-bold">fromCodePoint</span>
+                                </li>
+                                <li><span class="text-bold">includes</span>
+                                </li>
+                                <li><span class="text-bold">indexOf</span>
+                                </li>
+                                <li><span class="text-bold">lastIndexOf</span>
+                                </li>
+                                <li><span class="text-bold">localeCompare</span>
+                                </li>
+                                <li><span class="text-bold">match</span>
+                                </li>
+                                <li><span class="text-bold">matchAll</span>
+                                </li>
+                                <li><span class="text-bold">normalize</span>
+                                </li>
+                                <li><span class="text-bold">padEnd</span>
+                                </li>
+                                <li><span class="text-bold">padStart</span>
+                                </li>
+                                <li><span class="text-bold">raw</span>
+                                </li>
+                                <li><span class="text-bold">repeat</span>
+                                </li>
+                                <li><span class="text-bold">replace</span>
+                                </li>
+                                <li><span class="text-bold">replaceAll</span>
+                                </li>
+                                <li><span class="text-bold">search</span>
+                                </li>
+                                <li><span class="text-bold">slice</span>
+                                </li>
+                                <li><span class="text-bold">split</span>
+                                </li>
+                                <li><span class="text-bold">startsWith</span>
+                                </li>
                                 <li><span class="text-bold">substring</span>
                                     -  method returns the extracted part in a new string. end - позиция символа СЛЕДУЮЩЕГО после среза 
                                     <code>"string".substring(start 1, end 4) // tri</code>
@@ -714,13 +793,27 @@
                                     <code>"string".split() // ["s", "t", "r", "i", "n", "g"]</code>
                                     <code>"new string".split(" ") // ["new", "string"]</code>
                                 </li>
+                                <li><span class="text-bold">toLocaleLowerCase</span>
+                                </li>
+                                <li><span class="text-bold">toLocaleUpperCase</span>
+                                </li>
                                 <li><span class="text-bold">toLowerCase</span>
                                     -  method converts a string to lowercase letters.
                                     <code>"STRING".toLowerCase() // string</code>
                                 </li>
+                                <li><span class="text-bold">toString</span>
+                                </li>
                                 <li><span class="text-bold">toUpperCase</span>
                                     -  method converts a string to uppercase letters.
                                     <code>"string".toUpperCase() // STRING</code>
+                                </li>
+                                <li><span class="text-bold">trim</span>
+                                </li>
+                                <li><span class="text-bold">trimEnd</span>
+                                </li>
+                                <li><span class="text-bold">trimStart</span>
+                                </li>
+                                <li><span class="text-bold">valueOf</span>
                                 </li>
                             </ul>
                             
