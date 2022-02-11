@@ -92,9 +92,9 @@
 
 .text-bold {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px var(--dark-color);
+    color: var(--attention-color);
 }
 
 
