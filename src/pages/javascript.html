@@ -202,6 +202,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">flatMap</span>
+                                    - A new array with each element being the result of the callback function and flattened to a depth of 1. 
+                                    <code>array.flatMap((currentValue, index, array) => {} )</code>
+                                    <code>[0,1,2].flatMap(e=>[e, e+1]) // Array(6) [ 0, 1, 1, 2, 2, 3 ]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">forEach</span>
@@ -228,6 +231,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">isArray</span>
+                                    - use it as Array.isArray(). returns true if an object is an array, otherwise false.
+                                    <code>Array.isArray(obj)</code>
+                                    <code>[0,1,2].isArray() vs Array.isArray([0,1,2]) // undefined vs true</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">join</span>
@@ -649,33 +655,20 @@
                             <div class="text">При отсутствии совпадений возвращается не пустой массив, а именно null. </div>
                             <div class="text">чтобы результатом всегда был массив :</div>
                             <code>let result = str.match(/template/g) || [ ];</code>
-
-                            <fieldset>
-                                <legend>Задача:</legend>
-                                <div>найти в тексте число ХХХ (цыфры не известны)</div>
-                                <code>"a number is 123".match(/\d\d\d/); // Array [ "123" ]</code>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Задача:</legend>
-                                <div>найти в тексте первые три символа, не являющихся цыфрами (символы не известны)</div>
-                                <code>"a number is 123".match(/\D\D\D/); // Array [ "a n" ]</code>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Задача:</legend>
-                                <div>найти в тексте "символ символ пробел"</div>
-                                <code>"a number is 123".match(/\D\D\s/); // Array [ "er " ]</code>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Задача:</legend>
-                                <div>найти в тексте "пробел символ НЕпробел"</div>
-                                <code>"a number is 123".match(/\s\D\S/); // Array [ " nu" ]</code>
-                            </fieldset>
+                            <code>"a number is 123".match(/\d\d\d/); // Array [ "123" ] // цифры</code>
+                            <code>"a number is 123".match(/\D\D\D/); // Array [ "a n" ] // НЕ цифры</code>
+                            <code>"a number is 123".match(/\D\s/); // Array [ "r " ] // символ, пробел</code>
+                            <code>"a number is 123".match(/\s\D\S/); // Array [ " nu" ] // пробел, символ, НЕ пробел</code>
+                            <code>"a number is 123".match(/^a/) // Array [ "a" ] // первый символ равен "3" </code>
+                            <code>"a number is 123".match(/^А/) // null // первый символ не равен "А" </code>
+                            <code>"a number is 123".match(/3$/) // Array [ "3" ] // последний символ равен "3" </code>
+                            <code>"a number is 123".match(/4$/) // null // последний символ не равен "4" </code>
 
                             <span class="title-text">str.replace()</span>
                             <code>let result = str.replace(template, replacement);</code>
                             <div class="text">специальные комбинации символов :</div>
                             <code>$& $` $' $n $&#60name> $$</code>
-                            <code>alert( "Люблю HTML".replace(/HTML/, "$& и JavaScript") ); // Люблю HTML и JavaScript</code>
+                            <code>"Люблю HTML".replace(/HTML/, "$& и JavaScript") // Люблю HTML и JavaScript</code>
 
                             <span class="title-text">regexp.test(str)</span>
                             <code>let result = regexp.test(str);</code>
@@ -725,8 +718,10 @@
 
                             <ul class="list">
                                 <li><span class="text-bold">charAt</span>
-                                    -  method returns the character at a specified index (position) in a string.
-                                    <code>"string".charAt(index 2) // r</code>
+                                    -  returns the character at a specified index (position) in a string.<br>
+                                    - If index is out of range, charAt() returns an empty string. 
+                                    <code>string.charAt(index)</code>
+                                    <code>"string".charAt(2) // r</code>
                                 </li>
                                 <li><span class="text-bold">charCodeAt</span>
                                 </li>
@@ -737,6 +732,9 @@
                                 <li><span class="text-bold">endsWith</span>
                                 </li>
                                 <li><span class="text-bold">fromCharCode</span>
+                                    - converts Unicode values to characters.
+                                    <code>String.fromCharCode(n1, n2, ..., nX)</code>
+                                    <code>String.fromCharCode(65) // A</code>
                                 </li>
                                 <li><span class="text-bold">fromCodePoint</span>
                                 </li>
@@ -779,7 +777,8 @@
                                     <code>"string".substring(start 1, end 4) // tri</code>
                                 </li>
                                 <li><span class="text-bold">substr</span>
-                                    -  method extracts a part of a string.
+                                    -  is no longer recommended. extracts a part of a string.
+                                    <code>string.substr(start, length)</code>
                                     <code>"string".substr(1, 4) // trin</code>
                                 </li>
                                 <li><span class="text-bold">slice</span>
