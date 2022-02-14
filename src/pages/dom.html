@@ -20,29 +20,9 @@
     
         <article class="main__article">
 
-            <!-- Document -->
+            <!-- Class vs Style -->
             <section class="section box-flex-column">
-                <div class="title-section inline-content text-font-family-Indie-Flower">Document</div>
-                <div class="text-small">
-                    Источники:
-                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model">MDN</a>
-                </div>
-                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
-    
-                <div class="popup" id="popup">
-                    <div class="popup__body">
-                        <div class="content-section">
-                            <span class="title-text">Document . documentElement</span>
-                            <div class="text">свойство. позволяет обратиться к корневому элементу документа (для HTML документа это html).</div>
-                            <code>const element = document . documentElement;</code>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Class || Style -->
-            <section class="section box-flex-column">
-                <div class="title-section inline-content text-font-family-Indie-Flower">Class || Style</div>
+                <div class="title-section inline-content text-font-family-Indie-Flower">Class vs Style</div>
                 <div class="text-small">
                     Источники:
                     <a target="_blank" rel = "noopener" href="https://learn.javascript.ru/styles-and-classes">learn.javascript</a>
@@ -52,7 +32,7 @@
                 <div class="popup" id="popup">
                     <div class="popup__body">
                         <div class="content-section">
-                            <div class="title-section inline-content text-font-family-Indie-Flower">Class || Style</div>
+                            <div class="title-section inline-content text-font-family-Indie-Flower">Class vs Style</div>
 
                             <div class="text">Классы – всегда предпочтительный вариант по сравнению со style.</div>
                             <div class="text">Используй свойство style только, если вычисляешь свойства элемента динамически.</div>
@@ -90,6 +70,79 @@
                             <div class="text">pseudo Указывается, если нужен стиль псевдоэлемента, например ::before. </div>
                             <code>let computedStyle = getComputedStyle(document.body);<br>
                                 alert( computedStyle.marginTop );</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Document -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">Document</div>
+                <div class="text-small">
+                    Источники:
+                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model">MDN</a>
+                </div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+    
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <span class="title-text">Document.documentElement</span>
+                            <div class="text">свойство. позволяет обратиться к корневому элементу документа (для HTML документа это html).</div>
+                            <code>const element = document.documentElement;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Node  -->
+            <section class="section box-flex-column">
+                <div class="title-section inline-content text-font-family-Indie-Flower">the Node types</div>
+                <div class="text-small">Источники:
+                    <a target="_blank" rel = "noopener" href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/">javascripttutorial.net</a>
+                </div>
+                <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
+                
+                <div class="popup" id="popup">
+                    <div class="popup__body">
+                        <div class="content-section">
+                            <div class="title-section inline-content text-font-family-Indie-Flower">the Node types</div>
+                            <span class="title-text">Типы узлов</span>
+                            <ul class="list">
+                                <li>
+                                    <span class="text-bold">Node.ELEMENT_NODE</span>
+                                    <code>getElementById()</code>
+                                    <code>querySelector()</code>
+                                    -  returns an object with the Element type 
+                                    <div>BUT!!!</div>
+                                    <code>getElementsByClassName()</code>
+                                    <code>getElementsByName()</code>
+                                    <code>getElementsByTagName()</code>
+                                    <code>querySelectorAll()</code>
+                                    - returns a NodeList of elements.
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.TEXT_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.CDATA_SECTION_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.PROCESSING_INSTRUCTION_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.COMMENT_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.DOCUMENT_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.DOCUMENT_TYPE_NODE</span>
+                                </li>
+                                <li>
+                                    <span class="text-bold">Node.DOCUMENT_FRAGMENT_NODE</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

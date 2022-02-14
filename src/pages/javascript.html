@@ -121,6 +121,8 @@
                 <div class="title-section inline-content text-font-family-Indie-Flower">Array</div>
                 <div class="text-small">
                     Источники:
+                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN</a>
+                    <a target="_blank" rel = "noopener" href="https://www.w3schools.com/jsref/jsref_obj_array.asp">w3schools.com</a>
                     <a target="_blank" rel = "noopener" href="https://basicweb.ru/javascript/js_array.php">basicweb.ru</a>
                 </div>
                 <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
@@ -167,6 +169,11 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">copyWithin</span>
+                                    - copies array elements to another position in the array. overwrites. does not add items.
+                                    <code>array.copyWithin(target, start, end)</code>
+                                    <code>[0,1,2,3].copyWithin(0,2,3) // [ 2, 1, 2, 3 ]</code>
+                                    <code>[0,1,2,3].copyWithin(0,2) // [ 2, 3, 2, 3 ]</code>
+                                    <code>[0,1,2,3].copyWithin(-1,2) // [ 0, 1, 2, 2 ]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">entries</span>
@@ -176,6 +183,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">every</span>
+                                    - true if the callbackFn function returns a truthy value for every array element. Otherwise, false. 
+                                    <code>array.every(function(currentValue, index, arr), thisValue)</code>
+                                    <code>[0,1,2].every(e=>e>0) // true</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">fill</span>
@@ -707,6 +717,7 @@
                 <div class="text-small">
                     Источники:
                     <a target="_blank" rel = "noopener" href="https://learn.javascript.ru/String-introduction">learn.javascript</a>
+                    <a target="_blank" rel = "noopener" href="https://www.w3schools.com/jsref/jsref_obj_string.asp">w3schools.com</a>
                 </div>
                 <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
                 
@@ -724,8 +735,14 @@
                                     <code>"string".charAt(2) // r</code>
                                 </li>
                                 <li><span class="text-bold">charCodeAt</span>
+                                    - returns the Unicode of the character at a specified index (position) in a string.
+                                    <code>string.charCodeAt(index)</code>
+                                    <code>"string".charCodeAt(1) // 116 (t)</code>
                                 </li>
                                 <li><span class="text-bold">codePointAt</span>
+                                    - returns the Unicode value of the character at the specified index in a string.
+                                    <code>public int codePointAt(int index)</code>
+                                    <code>'☃★♲'.codePointAt(1) // 9733</code>
                                 </li>
                                 <li><span class="text-bold">concat</span>
                                 </li>
