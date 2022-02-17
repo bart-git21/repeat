@@ -199,6 +199,7 @@
                                     <span class="text-bold">filter</span>
                                     - creates a new array filled with elements that pass a test provided by a function. does not change the original array.
                                     <code>array.filter(function(currentValue, index, arr), thisValue)</code>
+                                    <code>[0,1,2].filter(e => e>0) // [ 1, 2 ]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">find</span>
@@ -214,6 +215,8 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">flat</span>
+                                    - returns a new array with the sub-array elements concatenated into it.
+                                    <code>[0, 1, 2, [3, 4]].flat() // [0, 1, 2, 3, 4]</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">flatMap</span>
@@ -238,6 +241,8 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">includes</span>
+                                    - returns true if an array contains a specified value. or false
+                                    <code>array.includes(element, start)</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">indexOf</span>
@@ -756,6 +761,9 @@
                                     <code>"a new ".concat("string") // a new string</code>
                                 </li>
                                 <li><span class="text-bold">endsWith</span>
+                                    - returns true if a string ends with a specified string. or false.
+                                    <code>string.endsWith(searchvalue, length)</code>
+                                    <code>"string".endsWith("ng") // true</code>
                                 </li>
                                 <li><span class="text-bold">fromCharCode</span>
                                     - converts Unicode values to characters.
@@ -763,6 +771,9 @@
                                     <code>String.fromCharCode(65) // A</code>
                                 </li>
                                 <li><span class="text-bold">fromCodePoint</span>
+                                    - return a string created by using the specified sequence of code points.
+                                    <code>String.fromCodePoint(num1, num2, ..., numN)</code>
+                                    <code>String.fromCodePoint(9731, 9733, 9842, 0x2F804) // "☃★♲你"</code>
                                 </li>
                                 <li><span class="text-bold">includes</span>
                                 </li>
