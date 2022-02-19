@@ -262,6 +262,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">keys</span>
+                                    - returns a new Array iterator object.
+                                    <code>array.keys()</code>
+                                    <code>['a', 'b', 'c'].keys().next().value // 0</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">lastIndexOf</span>
@@ -341,9 +344,16 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">toLocaleString</span>
+                                    - returns a string with a language sensitive representation of this date. 
+                                    <code>Date.toLocaleString(locales, options)</code>
+                                    <code>new Date('21 Dec 1997 14:12:00 UTC').toLocaleString("ru") // 21.12.1997, 17:12:00</code>
+                                    <code>new Date('21 Dec 1997 14:12:00 UTC').toLocaleString("en") // 12/21/1997, 5:12:00 PM</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">toString</span>
+                                    - returns a string with array values separated by commas.
+                                    <code>array.toString()</code>
+                                    <code>[0,1,2].toString() // "0,1,2"</code>
                                 </li>
                                 <li>
                                     <span class="text-bold">unshift</span>
@@ -352,6 +362,9 @@
                                 </li>
                                 <li>
                                     <span class="text-bold">values</span>
+                                    - returns a new array iterator object that contains the values for each index in the array. 
+                                    <code>array.values()</code>
+                                    <code>['a', 'b', 'c'].values().next().value // a</code>
                                 </li>
                             </ul>
                         </div>
@@ -776,10 +789,18 @@
                                     <code>String.fromCodePoint(9731, 9733, 9842, 0x2F804) // "☃★♲你"</code>
                                 </li>
                                 <li><span class="text-bold">includes</span>
+                                    - returns true if a string contains a specified string. or false
+                                    <code>string.includes(searchvalue, start)</code>
+                                    <code>"a new string".includes("tri") // true</code>
                                 </li>
                                 <li><span class="text-bold">indexOf</span>
                                 </li>
                                 <li><span class="text-bold">lastIndexOf</span>
+                                    - returns the index (position) of the last occurrence of a specified value in a string. or -1. 
+                                    searches the string from the end to the beginning. 
+                                    returns the index from the beginning (position 0).
+                                    <code>string.lastIndexOf(searchvalue, start)</code>
+                                    <code>"this string include a string".lastIndexOf("string") // 22</code>
                                 </li>
                                 <li><span class="text-bold">localeCompare</span>
                                 </li>
