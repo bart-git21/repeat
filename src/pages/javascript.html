@@ -794,6 +794,9 @@
                                     <code>"a new string".includes("tri") // true</code>
                                 </li>
                                 <li><span class="text-bold">indexOf</span>
+                                    - returns the position of the first occurrence of a value in a string. or -1. 
+                                    <code>string.indexOf(searchvalue, start)</code>
+                                    <code>"string".indexOf("r") // 2</code>
                                 </li>
                                 <li><span class="text-bold">lastIndexOf</span>
                                     - returns the index (position) of the last occurrence of a specified value in a string. or -1. 
@@ -803,10 +806,25 @@
                                     <code>"this string include a string".lastIndexOf("string") // 22</code>
                                 </li>
                                 <li><span class="text-bold">localeCompare</span>
+                                    - compares two strings in the current locale. returns sort order -1, 1, or 0 (for before, after, or equal).
+                                    <code>string.localeCompare(compareString)</code>
+                                    <code>'a'.localeCompare('c'); // -1 // // The letter "a" is before "c"</code>
+                                    <code>'c'.localeCompare('a'); // 1</code>
+                                    <code>'a'.localeCompare('a'); // 0</code>
                                 </li>
                                 <li><span class="text-bold">match</span>
+                                    - returns an array with the matches. or null.
+                                    matches a string against a regular expression. If the search value is a string, it is converted to a regular expression.
+                                    <code>string.match(regExp)</code>
+                                    <code>"String. New string".match(/[A-Z]/g) // [ "S", "N" ]</code>
                                 </li>
                                 <li><span class="text-bold">matchAll</span>
+                                    - returns an iterator of all results matching a string against a regular expression, including capturing groups.
+                                    <code>string.matchAll(regexp)</code>
+                                    <code>
+                                        let result = "JavaScript is not Java".matchAll(/Java[a-z]*/gi);<br>
+                                        for (item of result) console.log(item); // [ "JavaScript" ] [ "Java" ]
+                                    </code>
                                 </li>
                                 <li><span class="text-bold">normalize</span>
                                 </li>
@@ -823,6 +841,10 @@
                                 <li><span class="text-bold">replaceAll</span>
                                 </li>
                                 <li><span class="text-bold">search</span>
+                                    - returns the index (position) of the first match. or -1.
+                                    matches a string against a regular expression **. 
+                                    <code>string.search(searchValue) // If the search value is a string, it is converted to a regular expression.</code>
+                                    <code>"string. new string".search(/[^\w\s]/g) // 6 (позиция точки)</code>
                                 </li>
                                 <li><span class="text-bold">slice</span>
                                 </li>
