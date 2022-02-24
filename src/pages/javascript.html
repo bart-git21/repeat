@@ -832,20 +832,32 @@
                                     <code>'\u006E\u0303'.normalize('NFC') // ñ (ñ as '\u006E\u0303' converted into a normalized form '\u00F1')</code>
                                 </li>
                                 <li><span class="text-bold">padEnd</span>
+                                    - pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. 
+                                    <code>string.padEnd(targetLength, padString)</code>
+                                    <code>"text".padEnd(6, ".") // text..</code>
                                 </li>
                                 <li><span class="text-bold">padStart</span>
+                                    - pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. 
+                                    <code>string.padStart(targetLength, padString)</code>
+                                    <code>"text".padStart(6, ".") // ..text</code>
                                 </li>
                                 <li><span class="text-bold">raw</span>
+                                    - return the raw string form of a given template literal.
+                                    <code>String.raw(callSite, ...substitutions)</code>
                                 </li>
                                 <li><span class="text-bold">repeat</span>
                                     - returns a string with a number of copies of a string. does not change the original string.
                                     <code>string.repeat(count)</code>
+                                    <code>"text-".repeat(3) // text-text-text-</code>
                                 </li>
                                 <li><span class="text-bold">replace</span>
                                     - searches a string for a value or a regular expression. returns a new string with the value(s) replaced.
                                     <code>string.replace(searchValue, newValue)</code>
                                 </li>
                                 <li><span class="text-bold">replaceAll</span>
+                                    - return a new string, with all matches of a pattern replaced by a replacement.
+                                    <code>replaceAll(regexp/substr, replacerFunction)</code>
+                                    <code>"this text is a very beautiful text".replaceAll("text", "message") // this message is a very beautiful message</code>
                                 </li>
                                 <li><span class="text-bold">search</span>
                                     - returns the index (position) of the first match. or -1.
@@ -857,67 +869,88 @@
                                     - returns the extracted part in a new string. 
                                     <code>string.slice(start, end)</code>
                                 </li>
+                                <li><span class="text-bold">slice</span>
+                                    -  см. метод substring. slice понимает минус. 
+                                    extracts a part of a string. 
+                                    does not change the original string.
+                                    <code>string.slice(start, end)</code>
+                                    <code>"string".slice(start 1, end 4) // tri</code>
+                                    <code>"string".slice(-2) // ng</code>
+                                </li>
                                 <li><span class="text-bold">split</span>
-                                    - splits a string into an array of substrings.
+                                    - splits a string into an array of substrings. 
+                                    does not change the original string.
                                     <code>string.split(separator, limit)</code>
+                                    <code>"string".split() // ["s", "t", "r", "i", "n", "g"]</code>
+                                    <code>"new string".split(" ") // ["new", "string"]</code>
                                 </li>
                                 <li><span class="text-bold">startsWith</span>
                                     - returns true if a string starts with a specified string. or false. 
                                     <code>string.startsWith(searchValue, start)</code>
-                                </li>
-                                <li><span class="text-bold">substring</span>
-                                    -  method returns the extracted part in a new string. end - позиция символа СЛЕДУЮЩЕГО после среза. does not change the original string.
-                                    <code>string.substring(start, end)</code>
-                                    <code>"string".substring(start 1, end 4) // tri</code>
+                                    <code>"string".startsWith("str") // true</code>
+                                    <code>"string".startsWith("tr", 1) // true</code>
                                 </li>
                                 <li><span class="text-bold">substr</span>
                                     -  is no longer recommended. extracts a part of a string.
                                     <code>string.substr(start, length)</code>
                                     <code>"string".substr(1, 4) // trin</code>
                                 </li>
-                                <li><span class="text-bold">slice</span>
-                                    -  см. метод substring. slice понимает минус. extracts a part of a string. does not change the original string.
-                                    <code>string.slice(start, end)</code>
-                                    <code>"string".slice(start 1, end 4) // tri</code>
-                                    <code>"string".slice(-2) // ng</code>
-                                </li>
-                                <li><span class="text-bold">split</span>
-                                    - splits a string into an array of substrings. does not change the original string.
-                                    <code>string.split(separator, limit)</code>
-                                    <code>"string".split() // ["s", "t", "r", "i", "n", "g"]</code>
-                                    <code>"new string".split(" ") // ["new", "string"]</code>
+                                <li><span class="text-bold">substring</span>
+                                    -  method returns the extracted part in a new string. end - позиция символа СЛЕДУЮЩЕГО после среза. does not change the original string.
+                                    <code>string.substring(start, end)</code>
+                                    <code>"string".substring(start 1, end 4) // tri</code>
                                 </li>
                                 <li><span class="text-bold">toLocaleLowerCase</span>
                                     - converts a string to lowercase letters, using current locale. The locale is based on the language settings of the browser.
-                                    <code>string.toLocaleLowerCase()</code>
+                                    <code>string.toLocaleLowerCase(locale)</code>
                                 </li>
                                 <li><span class="text-bold">toLocaleUpperCase</span>
                                     - converts a string to uppercase letters, using current locale. The locale is based on the language settings of the browser.
-                                    <code>string.toLocaleUpperCase()</code>
+                                    <code>string.toLocaleUpperCase(locale)</code>
                                 </li>
                                 <li><span class="text-bold">toLowerCase</span>
-                                    -  method converts a string to lowercase letters. does not change the original string.
+                                    -  converts a string to lowercase letters. does not change the original string.
                                     <code>"STRING".toLowerCase() // string</code>
                                 </li>
                                 <li><span class="text-bold">toString</span>
-                                     - Normally, you will not use it in your own code. returns a string as a string. does not change the original string. can be used to convert a string object into a string.
+                                    - Normally, you will not use it in your own code. 
+                                    returns a string as a string. 
+                                    does not change the original string. 
+                                    can be used to convert a string object into a string.
                                     <code>string.toString()</code>
                                 </li>
                                 <li><span class="text-bold">toUpperCase</span>
-                                    -  method converts a string to uppercase letters. does not change the original string.
+                                    -  converts a string to uppercase letters. does not change the original string.
                                     <code>"string".toUpperCase() // STRING</code>
                                 </li>
                                 <li><span class="text-bold">trim</span>
                                     - removes whitespace from both sides of a string.
                                     <code>string.trim()</code>
+                                    <code>"   text  .    ".trim() // "text  ."</code>
+
                                 </li>
                                 <li><span class="text-bold">trimEnd</span>
+                                    - removes whitespace from the end of a string. 
+                                    trimRight() is an alias of this method. 
+                                    <code>string.trimEnd()</code>
+                                    <code>string.trimRight()</code>
+                                    <code>"   text  .    ".trimEnd() // "   text  ."</code>
                                 </li>
                                 <li><span class="text-bold">trimStart</span>
+                                    - removes whitespace from the  beginning of a string. 
+                                    trimLeft() is an alias of this method. 
+                                    <code>string.trimEnd()</code>
+                                    <code>string.trimLeft()</code>
+                                    <code>"   text  .    ".trimStart() // "text  .    "</code>
                                 </li>
                                 <li><span class="text-bold">valueOf</span>
-                                    - Normally, you will not use it in your code. returns the primitive value of a string. can be used to convert a string object into a string.
+                                    - Normally, you will not use it in your code. 
+                                    returns the primitive value of a string. can be used to convert a string object into a string.
                                     <code>string.valueOf()</code>
+                                    <code>str = new String("text");<br>
+                                        console.log(str); // String { "text" } <br>
+                                        console.log(str.valueOf()); // text
+                                    </code>
                                 </li>
                             </ul>
                             
