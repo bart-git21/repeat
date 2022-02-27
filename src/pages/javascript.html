@@ -564,6 +564,8 @@
                 <div class="title-section inline-content text-font-family-Indie-Flower">Object</div>
                 <div class="text-small">Источники:
                     <a target="_blank" rel = "noopener" href="https://learn.javascript.ru/object">learn.javascript</a>
+                    <a target="_blank" rel = "noopener" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object">MDN</a>
+                    <a target="_blank" rel = "noopener" href="https://basicweb.ru/javascript/js_object.php">basicweb.ru</a>
                 </div>
                 <div class="button popup-button column-content" id="popup_open"><span>Read more...</span></div>
                 
@@ -607,6 +609,178 @@
                             
                             <span class="title-text">встроенные объекты</span>
                             <div class="text">Например, те, которые работают с датами, ошибками, HTML-элементами и т.д. </div>
+
+                            
+                            <span class="title-text">Методы конструктора Object</span>
+                            <ul class="list">
+                                <li><span class="text-bold">assign()</span>
+                                   - Создаёт новый объект путём копирования значений всех собственных перечислимых свойств из одного или более исходных объектов в целевой объект.
+                                   <code>Object.assign(target, ...sources)</code>
+                                   <code>Object.assign({}, { a: 1, b: 1}, { b: 2}) // { a: 1, b: 2}</code>
+                                </li>
+                                <li><span class="text-bold">create()</span>
+                                    - Создаёт новый объект  со свойством [[Prototype]], указанным как proto, и необязательными свойствами.
+                                    <code>Object.create(proto, propertiesObject)</code>
+                                    <code>let user={color:"red"};<br>let tom=Object.create(user);<br>console.log(tom.color) // red</code>
+                                </li>
+                                <li><span class="text-bold">defineProperties()</span>
+                                    - Добавляет к объекту именованные свойства, описываемые переданными дескрипторами.
+                                    <code>Object.defineProperties(obj, props)</code>
+                                    <code>let user = {};<br>Object.defineProperties(user, {'propertyName': {value:"propertyValue"},}) // user{propertyName:"propertyValue"}</code>
+                                </li>
+                                <li><span class="text-bold">defineProperty()</span>
+                                    - Добавляет к объекту именованное свойство, описываемое переданным дескриптором.
+                                    <code>Object.defineProperty(obj, prop, descriptor)</code>
+                                    <code>let user = {};<br>Object.defineProperty(user, "property_name", {value:"john"}) // user{property_name:"john"}</code>
+                                </li>
+                                <li><span class="text-bold">entries()</span>
+                                    -  возвращает массив собственных перечисляемых свойств указанного объекта в формате [key, value]
+                                    <code>Object.entries(obj)</code>
+                                    <code>Object.entries({100:"value1", 22: "value2"}) // [[ "22", "value2" ],[ "100", "value1" ]]</code>
+                                </li>
+                                <li><span class="text-bold">freeze()</span>
+                                    - Замораживает объект: другой код не сможет удалить, добавить или изменить никакое свойство.
+                                    <br>Note! У объектов, запечатанных с помощью Object.seal() могут быть изменены их существующие свойства. 
+                                    Существующие свойства в объектах, замороженных с помощью Object.freeze() становятся неизменяемыми.
+                                    <code>Object.freeze(obj)</code>
+                                    <code>Object.freeze(user{name:"john"}); <br>Object.isFrozen(obj) // true</code>
+                                </li>
+                                <li><span class="text-bold">fromEntries()</span>
+                                    - преобразует список пар ключ-значение в объект.
+                                    <code>Object.fromEntries(iterable);</code>
+                                    <code>let iterable_arr = Object.entries({100:"value1", 22: "value2"});<br>Object.fromEntries(iterable_arr) // Object { 22: "value2", 100: "value1" }</code>
+                                </li>
+                                <li><span class="text-bold">getOwnPropertyDescriptor()</span>
+                                    - Возвращает дескриптор свойства для именованного свойства объекта.
+                                    <br>- возвращает объект, описывающий конфигурацию определенного свойства для данного объекта 
+                                    (то есть свойства, непосредственно присутствующего в объекте, а не в цепочке прототипов объекта). 
+                                    Возвращаемый объект является изменяемым, но его изменение не влияет на исходную конфигурацию свойства.
+                                    <code>Object.getOwnPropertyDescriptor(obj, prop)</code>
+                                    <code>let user = {name: "john",color: "red"};<br>console.log(Object.getOwnPropertyDescriptor(user, "color")) <br>// Object { value: "red", writable: true, enumerable: true, configurable: true }</code>
+                                </li>
+                                <li><span class="text-bold">getOwnPropertyDescriptors()</span>
+                                    -  возвращает все собственные дескрипторы свойств данного объекта.
+                                    <code>Object.getOwnPropertyDescriptors(obj)</code>
+                                    <code>let user = {name: "john",color: "red"};<br>
+                                        console.log(Object.getOwnPropertyDescriptors(user)); <br>
+                                        // Object {<br>
+                                        color: Object { value: "red", writable: true, enumerable: true, … }<br>
+                                        name: Object { value: "john", writable: true, enumerable: true, … }}</code>
+                                </li>
+                                <li><span class="text-bold">getOwnPropertyNames()</span>
+                                    - Возвращает массив, содержащий имена всех переданных объекту собственных перечисляемых и неперечисляемых свойств.
+                                    <code>Object.getOwnPropertyNames(obj)</code>
+                                    <code>let user = {name: "john",color: "red"};<br>console.log(Object.getOwnPropertyNames(user)) // Array [ "name", "color" ]</code>
+                                </li>
+                                <li><span class="text-bold">getOwnPropertySymbols()</span>
+                                    - Возвращает массив всех символьных свойств, найденных непосредственно в переданном объекте.
+                                    <code>Object.getOwnPropertySymbols(obj)</code>
+                                </li>
+                                <li><span class="text-bold">getPrototypeOf()</span>
+                                    - Возвращает прототип указанного объекта.
+                                    <code>Object.getPrototypeOf(obj)</code>
+                                    <code>Object.getPrototypeOf([0,1]) // Array []</code>
+                                </li>
+                                <li><span class="text-bold">hasOwnProperty()</span>
+                                    - возвращает логическое значение, указывающее, имеет ли объект указанное свойство как собственное свойство (в отличие от наследования).
+                                    <code>hasOwnProperty(prop)</code>
+                                    <code>{name:"john", color:"red"}.hasOwnProperty("name") // true</code>
+                                </li>
+                                <li><span class="text-bold">is()</span>
+                                    - Определяет, являются ли два значения одинаковыми
+                                    <code>Object.is(value1, value2);</code>
+                                    <code>Object.is(25, 25) // true</code>
+                                    <code>Object.is(25, "25") // false</code>
+                                    <code>Object.is(0, -0) // false</code>
+                                </li>
+                                <li><span class="text-bold">isExtensible()</span>
+                                    - Определяет, разрешено ли расширение объекта.
+                                    <code>Object.isExtensible(obj)</code>
+                                    <code>Object.isExtensible([0,1]) // true</code>
+                                    <code>Object.preventExtensions(example);<br>Object.isExtensible(example) // false</code>
+                                    <code>Object.seal(example);<br>Object.isExtensible(example) // false</code>
+                                    <code>Object.freeze(example);<br>Object.isExtensible(example) // false</code>
+                                </li>
+                                <li><span class="text-bold">isFrozen()</span>
+                                    - Определяет, был ли объект заморожен.
+                                    <code>Object.isFrozen(obj)</code>
+                                    <code>Object.isFrozen([0,1]) // false</code>
+                                    <code>Object.freeze(example);<br>Object.isFrozen(example) // true</code>
+                                </li>
+                                <li><span class="text-bold">isPrototypeOf()</span>
+                                    - проверяет, существует ли объект в цепочке прототипов другого объекта.
+                                    <code>isPrototypeOf(object)</code>
+                                    <code>function foo() {};<br>function bar() {};<br>bar.prototype = Object.create(foo.prototype);
+                                        <br>console.log(foo.prototype.isPrototypeOf(new bar())) // true
+                                        <br>console.log(bar.prototype.isPrototypeOf(new foo())) // false
+                                    </code>
+                                </li>
+                                <li><span class="text-bold">isSealed()</span>
+                                    - Определяет, является ли объект запечатанным (sealed).
+                                    <code>Object.isSealed(obj)</code>
+                                    <code>Object.isSealed([0,1]) // false</code>
+                                    <code>Object.isSealed(Object.seal(example)) // true</code>
+                                </li>
+                                <li><span class="text-bold">keys()</span>
+                                    - Возвращает массив, содержащий имена всех собственных перечислимых свойств переданного объекта.
+                                    <code>Object.keys(obj)</code>
+                                    <code>Object.keys(['a', 'b', 'c']) // ['0', '1', '2']</code>
+                                    <code>Object.keys({ 100: 'a', 2: 'b', 7: 'c' }) // ['2', '7', '100']</code>
+                                </li>
+                                <li><span class="text-bold">preventExtensions()</span>
+                                    - Предотвращает любое расширение объекта.
+                                    <code>Object.preventExtensions(obj)</code>
+                                    <code>Object.preventExtensions(example)<br>Object.isExtensible(example) // false</code>
+                                </li>
+                                <li><span class="text-bold">propertyIsEnumerable()</span>
+                                    - возвращает логическое значение, указывающее, является ли указанное свойство перечислимым.
+                                    <code>propertyIsEnumerable(prop)</code>
+                                    <code>let user = {name: "john",color: "red"};<br>user.propertyIsEnumerable("color") // true</code>
+                                    <code>let user = {name: "john",color: "red"};<br>Object.defineProperty(user, "color", {enumerable: false})<br>user.propertyIsEnumerable("color") // false
+                                    </code>
+                                </li>
+                                <li><span class="text-bold">seal()</span>
+                                    - Предотвращает удаление свойств объекта другим кодом.
+                                    <br>Note! У объектов, запечатанных с помощью Object.seal() могут быть изменены их существующие свойства. 
+                                    Существующие свойства в объектах, замороженных с помощью Object.freeze() становятся неизменяемыми.
+                                    <code>Object.seal(obj)</code>
+                                    <code>Object.seal(example);<br>Object.isSealed(example) // true</code>
+                                </li>
+                                <li><span class="text-bold">setPrototypeOf()</span>
+                                    - Устанавливает или изменяет прототип (т.е. внутреннее свойство [[Prototype]])
+                                    <code>Object.setPrototypeOf(obj, prototype)</code>
+                                    <code>
+                                        let user = {name: "john",color: "red"};
+                                        <br>let tom = Object.create(user);
+                                        <br>console.log(tom.name); // john
+                                        <br>Object.setPrototypeOf(tom, {name:"tom"});
+                                        <br>console.log(tom.name); // tom
+                                    </code>
+                                </li>
+                                <li><span class="text-bold">toLocaleString()</span>
+                                    - возвращает строку, представляющую объект.
+                                    <code>toLocaleString()</code>
+                                    <code>new Date().toLocaleString() // 27.12.2021, 16:32:15</code>
+                                </li>
+                                <li><span class="text-bold">toString()</span>
+                                    - возвращает строку, представляющую объект.
+                                    <code>toString()</code>
+                                    <code>new Object().toString() // [object Object]</code>
+                                </li>
+                                <li><span class="text-bold">valueOf()</span>
+                                    - возвращает примитивное значение указанного объекта.
+                                    <code>valueOf()</code>
+                                    <code>[username= "john",color= "red"].valueOf() // Array [ "john", "red" ]</code>
+                                    <code>{10:0,111:1,22:2,3:3}.valueOf() // Object { 3: 3, 10: 0, 22: 2, 111: 1 }</code>
+                                </li>
+                                <li><span class="text-bold">values()</span>
+                                    - возвращает массив значений перечислимых свойств данного объекта в том же порядке, что и for...in цикле for ... in . 
+                                    <br>(Единственная разница в том, что цикл for...in перечисляет свойства в цепочке прототипов.)
+                                    <code>Object.values(obj)</code>
+                                    <code>Object.values({name: "john",color: "red"}) // Array [ "john", "red" ]</code>
+                                    <code>Object.values({10:0,111:1,22:2,3:3}) // Array(4) [ 3, 0, 2, 1 ]</code>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
