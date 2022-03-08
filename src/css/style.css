@@ -13,6 +13,7 @@
 @import url(header/logo.css);
 @import url(header/nav.css);
 
+@import url(blocks/backtotop.css);
 @import url(blocks/buttons.css);
 @import url(blocks/content.css);
 @import url(blocks/card.css);
