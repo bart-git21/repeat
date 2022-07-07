@@ -18,20 +18,12 @@ cover.onclick = () => {
     };
 }
 
+viewAudio.checked = true;
 
 viewAudio.addEventListener("change", function() {
-    if (viewAudio.checked == true) {
-        sound_audio.controls = false;
-    }
-    else sound_audio.controls = true;
+    return sound_audio.controls = !sound_audio.controls;
 })
 
 loopAudio.addEventListener("change", function() {
-    if (loopAudio.checked == true) {
-        sound_audio.loop = true;
-    }
-    else {
-        sound_audio.loop = false;
-    }
+    return sound_audio.loop = !sound_audio.loop;
 })
-
